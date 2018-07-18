@@ -1,0 +1,53 @@
+        body {
+            background-color: #efeee7;
+            color: #777777;
+            margin: 0 auto;
+            padding: 0;
+            
+        }
+        header {
+            background-color: #4aaaa5;
+            text-align: center;
+            color:#4aaaa5;
+            margin: 0 auto;
+            position: relative;
+            top: 0px;
+            left: 0px;
+            width: 960px;
+            height: 94px;
+        }
+        #Name {
+            background-color: #ffffff;
+            border: 2px solid #cccccc;
+            height: 50px;
+            width: 200px;
+            /* margin: 0 auto; */
+            float: left;
+        }
+        .container {
+            width: 960px;
+            margin: 0 auto;
+        }
+        h1 {
+            color: #4aaaa5;
+            font-size: 28px;
+            margin: 0px;
+            padding: 20px;
+        }
+        h2 {
+            font-size: 24px;
+            color: #4aaaa5;
+        }
+        /* #Contact_info */
+        #main_body {
+            line-height: 1.5;
+            padding: 2;
+        }
+        #bio_image {
+            float: left;
+            padding-right: 15px;
+            padding-bottom: 15px;
+            
+        }
+        
+    
