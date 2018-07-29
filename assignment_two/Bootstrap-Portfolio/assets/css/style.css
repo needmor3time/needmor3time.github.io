@@ -1,38 +1,38 @@
         body {
             background-color: #efeee7;
             color: #777777;
-            margin: 0 auto;
-            padding: 0;
+            /* margin: 0 auto;
+            padding: 0; */
             font-family: 'Arial', 'Helvetica Neue', Helvetica, sans-serif;
             background: url("../images/leaves-pattern.png");
         }
         /* default values for the header */
         header {
             background-color: #ffffff;
-            margin-top: 16px;
-            height: 94px;
+            /* margin-top: 16px; */
+            /* height: 94px; */
         }
         /* Name block on the header */
         #Name {
             background-color: #4aaaa5;
             border: 2px solid #cccccc;
             color:#efeee7;
-            height: 50px;
+            /* height: 50px;
             width: 200px;
-            float: left;
+            float: left; */
             /* position: absolute;
             top: 0px; */
         }
         /* sets some of the contact info block */
         #Contact_info {
-            /* text-align: center; */
             color:#4aaaa5;
-            /* margin: 0 auto; */
-            /* position: relative; */
-            /* top: 0px;
-            left: 0px;
-            width: 960px;
-            height: 94px; */
+            /* display: block;
+            padding: 30px; */
+        }
+             /* changes the background and font color on hover */
+        #Contact_info a:hover {
+            background-color: #4aaaa5;
+            color: #cccccc;
         }
         /* eliminates the dots for the list */
         /* ul {
@@ -45,17 +45,12 @@
             float: right;
         }
         /*sets the alignment and spacing of header list items  */
-        li a {
-            display: block;
-            text-align: center;
-            padding: 30px;
-            text-decoration: none;
-        } */
+        
         /* changes the background and font color on hover */
-        li a:hover {
+        /* li a:hover {
             background-color: #3E0CE8;
             color: #cccccc;
-        }
+        } */
         .container {
             /* width: 920px;
             margin: 0 auto; */
@@ -71,10 +66,21 @@
             padding: 20px; */
             font-family: 'Georgia', Times, Times New Roman, serif;
         }
+        h2 {
+            color: #4aaaa5;
+            font-family: 'Georgia', Times, Times New Roman, serif;
+        }
         h5 {
             /* font-size: 24px; */
             color: #4aaaa5;
             font-family: 'Georgia', Times, Times New Roman, serif;
+            text-align: center;
+        }
+        .nav-link {
+            font-size: 24px;
+            color: #4aaaa5;
+            font-family: 'Georgia', Times, Times New Roman, serif;
+            text-align: center;
         }
         /* #Contact_info { 
             height: 50px;
@@ -93,8 +99,8 @@
             padding-right: 15px;
             padding-bottom: 15px;
         } */
-        footer {
-            /* position: sticky;
+        .card {
+            /*position: sticky;
             bottom: 0; */
             background-color: #666666;
             /* height: 50px; */
@@ -103,9 +109,9 @@
         /* #copyright {
             text-align: center;
             /* position: fixed; 
-            bottom: 0;*/
+            bottom: 0;
         } */
-        input[type=text], select {
+        /* input[type=text], select {
             width: 100%;
             padding: 12px 20px;
             margin: 8px 0;
@@ -113,22 +119,22 @@
             border: 1px solid #ccc;
             border-radius: 4px;
             box-sizing: border-box;
-        }
+        } */
         
         input[type=submit] {
             width: 30%;
             background-color: #4aaaa5;
             color: white;
             padding: 14px 20px;
-            margin: 8px 0;
+            /* margin: 8px 0;
             border: none;
             border-radius: 4px;
-            cursor: pointer;
+            cursor: pointer; */
         }
         input[type=submit]:hover {
             background-color: #3E0CE8;
         }
-        .Portfolio_images {
+        /* .Portfolio_images {
             display: inline-block;
-        }
+        } */
 
