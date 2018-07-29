@@ -143,15 +143,18 @@
     .container {
         width: 480px;
         margin: 0 auto;
+        padding: 8px;
     }
     #Contact_info {
         width: 520px;
-        height: 94px;
+        
     }
     #bio_image {
         height: 160px;
         width: 160px;
     }
+    li a {
+        padding: 20px;
 }
 /*
   These rules take effect when the browser's width
@@ -162,6 +165,17 @@
     header {
       background-color: rgb(35, 145, 32);
     }
+    .container {
+        width: 374px;
+    }
+    #Contact_info {
+        width: 410px;
+        
+    }
+    #bio_image {
+        height: 120px;
+        width: 120px;
+    }
 }
 /*
   These rules take effect when the browser's width
@@ -171,5 +185,16 @@
     /* The body's bg color will be #333 */
     header {
         background-color: rgb(119, 77, 22);
+    }
+    .container {
+        width: 300px;
+    }
+    #Contact_info {
+        width: 340px;
+        
+    }
+    #bio_image {
+        height: 100px;
+        width: 100px;
     }
 }
