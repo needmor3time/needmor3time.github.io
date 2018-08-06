@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+    <meta charset="utf-8" />
+    <title>Greek Hangman</title>
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+    <script src="assets/javascript/game.js"/>
+    
+    </head>
+
+    <body>
+    <header>
+        <div class="container_header">
+            <div class="row">
+                <div class="col-md-1"></div>
+                <div class="col-md-5">
+                    <h1 id="Name">Greek Gods and Godesses</h1>
+                </div>
+                                      
+            </div>
+        </div>
+    </header>
+    
+        <br>
+        <div class="container">
+                <div class="row">
+                    <div class="col-md-8">
+                        <h2>Instructions</h2>
+                  
+                            <div class="row">
+                                
+                                <div class="col-md-12">
+                                            <div class="pull-left"><img src="http://4.bp.blogspot.com/-LwrC743CwZQ/T8TOWjjsc0I/AAAAAAAAyBw/CZ42Tx6jSTk/s1600/Redneck+Fun+0036.jpg"  height = 150 width = 150 alt="Greek gods pic"/></div>
+                                            <div class="pull-left">
+                                                <p class="instructions">The object of this game is to guess the name of the Greek god or godess.  Every guess will be logged below in the guesses category.  Correct guesses will show up in the god(goddess) name that is displayed in dashes.</p>
+                                                <p class="instructions">Hints will be given periodically to help, the amount of help given will increase as the number of guesses increase.</p>
+                                            </div>
+                                </div>    
+                                
+                            </div>
+                    </div>
+                </div>
+                <div class="greek_game">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <img src="assets/images/Hangman-0.png">
+                        </div>
+                    </div>
+                    <div class="dashboard"> <!--this div is to iterate through the logic-->
+                        <div class="guess_dashes">
+                            <!-- display number of dashes equal to the length of the randomly chosen god's name.  Length would remain constant for duration of this game, but update dash cooresponding to correct letter guessed.  Needs to persist through this game -->
+                        </div>
+                        <div class="display_guesses">
+                            <!-- display guessed letters -->
+                        </div>
+                        <div class="num_guesses_left">
+                            <a>You have 6 guesses left</a>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-1">
+                                <!--wins-->
+                            </div>
+                            <div class="col-md-1">
+                                <!--losses-->
+                            </div>
+                        </div>
+                    </div>  
+                </div>
+        </div>
+    </body>
+    <footer>
+        <div class="card" style="width: 100%">
+            <div class="card-body">
+                <h5 class="card-title">Copyright</h5>
+            </div>
+        </div>
+    </footer>
+</html>
