@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" type="text/css" href="assets/css/style.css"> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="nytimes.js"></script>
+
+<head>
+    <meta charset="utf-8">
+    <title>NY Times search</title>
+</head>
+
+<body>
+    <header>
+        <div class="container_header">
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <h2 style="text-align: center;" id="nytimes"><i class="far fa-newspaper"></i> New York Times Search</h2>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+        </div>
+    </header>
+    <br>
+    <div class="card">
+        <div class="container">
+            <div class="card-body">
+                <h6 class="card-title"><i class="fab fa-wpforms"></i> Search Parameters</h6>
+
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <label for="basic-url">Search Term:</label>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" aria-label="Your name" aria-describedby="basic-addon2">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <label for="basic-url">Start Year: (Optional)</label>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" aria-label="Your email" aria-describedby="basic-addon2">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+
+                    <div class="col-md-12">
+                        <label for="basic-url">End Year: (Optional)</label>
+                        <div class="input-group mb-3">
+                            <input type="text" class="form-control" aria-label="Your message" aria-describedby="basic-addon2">
+                        </div>
+                    </div>
+
+                </div>
+                <div class="row">
+
+                        <div class="col-md-12">
+                            <label for="basic-url">Number of records to Retrieve:</label>
+                            <div class="input-group mb-3">
+                                <input type="text" class="form-control" value = 5 aria-label="Your message" aria-describedby="basic-addon2">
+                            </div>
+                        </div>
+    
+                    </div>
+                <div class="input-group mb-2">
+                    <button type="button" class="btn btn-default btn-sm">
+                        <i class="fas fa-search"></i> Search 
+                    </button>
+                    <button type="button" class="btn btn-default btn-sm">
+                        <i class="fas fa-trash-alt"></i> Clear Results 
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <div class="card">
+        <div class="container">
+            <div class="card-body">
+                <h6 class="card-title"><i class="fas fa-table"></i> Top Articles</h6>
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+        <p style="text-align: center">Made with lots and lots of <i class="fas fa-skull"></i></p>
+    </div>
+</body>
+</html>

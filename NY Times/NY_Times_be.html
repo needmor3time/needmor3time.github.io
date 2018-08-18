@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <title>NYT Search</title>
+</head>
+
+<body>
+    Search Term:
+    <input type="text" name="searchTerm" id="searchTerm">
+    <br>
+    Start Year (Optional):
+    <input type="number" name="startYear" id="StartDate">
+    <br>
+    End Year (Optional):
+    <input type="number" name="endYear" id="endDate">
+    <br>
+    Number of Records to Retrieve<select id="resultNum">
+            <option value=5>5</option>
+            <option value=10>10</option>
+            <option value=20>20</option>            
+          </select>
+
+    <button id="search">Search</button>
+
+    <div id="results">
+
+    </div>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#search").on('click', function () {
+                var nyturl = "https://api.nytimes.com/svc/search/v2/articlesearch.json",
+                    articleName = $("#searchTerm").val().trim(),
+                    startYear = $("#StartDate").val().trim(),
+                    endYear = $("#endDate").val().trim(),
+                    pageNum = $("#resultNum").val().trim();
+                    
+                    console.log(endYear);
+                nyturl += '?' + $.param({
+                    'api-key': "cba7b0c0663c4feb81e080337df966a5",
+                    'q': articleName,
+                    'begin_date': startYear + "0101",
+                    'end_date': endYear + "1231",
+                    'page': pageNum
+                });
+                $.ajax({
+                    url: nyturl,
+                    method: 'GET',
+                }).done(function (result) {
+                    console.log(result);
+
+                    for(var i=0; i<pageNum; i++){
+                        var articleDiv = $("<div>");
+                        
+
+                    }
+
+
+                }).fail(function (err) {
+                    throw err;
+                });
+
+            });
+
+        });
+    </script>
+</body>
+
+</html>
