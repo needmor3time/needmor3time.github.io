@@ -5,6 +5,7 @@
     <title>Norse Trivia</title>
     <!-- <link rel="stylesheet" type="text/css" href="assets/css/reset.css"> -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.2/css/bootstrap.min.css" integrity="sha384-Smlep5jCw/wG7hdkwQ/Z5nLIefveQRIY9nfy6xoR1uRYBtpZgI6339F5dgvm/e9B" crossorigin="anonymous">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="assets/css/style.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/javascript/game.js"></script>
@@ -33,7 +34,6 @@
                             <div class="row">
                                 
                                 <div class="col-md-12">
-                                            <div class="pull-left"><img src="http://4.bp.blogspot.com/-LwrC743CwZQ/T8TOWjjsc0I/AAAAAAAAyBw/CZ42Tx6jSTk/s1600/Redneck+Fun+0036.jpg"  height = 150 width = 150 alt="Greek gods pic"/></div>
                                             <div class="pull-left">
                                                 <p class="instructions">The object of this game is to select the correct answer concerning the Norse gods or godesses.  Correct answers will be tallied as you play.</p>
                                                 <p class="instructions">Your score will be shown when time is up.</p>
@@ -43,120 +43,23 @@
                             </div>
                     </div>
                 </div>
-                <div>
-                    <button id="start">START</button>
+                <div class='row'>
+                        <div class='col'>
+                            <h1>Trivia Game</h1>
+                            <hr>
+                            <h3>Time Remaining: <span class='timer'></span></h3>
+                            <div class='question-box'></div>
+                            <button class='btn btn-success' id='submitGame'>Submit</button>
+                            <div class='end-screen'>
+                                <h4>Correct: <span class='correct'></span></h4>
+                                <h4>Incorrect: <span class='incorrect'></span></h4>
+                                <button class='btn btn-info' id='newGame'>New Game</button>
+                            </div>
+                        </div>
+                    </div>
+            
                 </div>
-                <div class="game">
-                    <div class="row">
-                        <div class="question1">
-                            <h3 id = "question1"></h3>
-                            <button id="answer1"></button>
-                            <button id="answer2"></button>
-                            <button id="answer3"></button>
-                            <button id="answer4"></button>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="question2">
-                            <h3 id = "question2"></h3>
-                            <button id="answer1"></button>
-                            <button id="answer2"></button>
-                            <button id="answer3"></button>
-                            <button id="answer4"></button>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="question3">
-                            <h3 id = "question4"></h3>
-                            <button id="answer1"></button>
-                            <button id="answer2"></button>
-                            <button id="answer3"></button>
-                            <button id="answer4"></button>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="question4">
-                            <h3 id = question></h3>
-                            <button id="answer1"></button>
-                            <button id="answer2"></button>
-                            <button id="answer3"></button>
-                            <button id="answer4"></button>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="question5">
-                            <h3 id = question></h3>
-                            <button id="answer1"></button>
-                            <button id="answer2"></button>
-                            <button id="answer3"></button>
-                            <button id="answer4"></button>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="question6">
-                            <h3 id = question></h3>
-                            <button id="answer1"></button>
-                            <button id="answer2"></button>
-                            <button id="answer3"></button>
-                            <button id="answer4"></button>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="question7">
-                            <h3 id = question></h3>
-                            <button id="answer1"></button>
-                            <button id="answer2"></button>
-                            <button id="answer3"></button>
-                            <button id="answer4"></button>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="question8">
-                            <h3 id = question></h3>
-                            <button id="answer1"></button>
-                            <button id="answer2"></button>
-                            <button id="answer3"></button>
-                            <button id="answer4"></button>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="question9">
-                            <h3 id = question></h3>
-                            <button id="answer1"></button>
-                            <button id="answer2"></button>
-                            <button id="answer3"></button>
-                            <button id="answer4"></button>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="question10">
-                            <h3 id = question></h3>
-                            <button id="answer1"></button>
-                            <button id="answer2"></button>
-                            <button id="answer3"></button>
-                            <button id="answer4"></button>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="question11">
-                            <h3 id = question></h3>
-                            <button id="answer1"></button>
-                            <button id="answer2"></button>
-                            <button id="answer3"></button>
-                            <button id="answer4"></button>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="question12">
-                            <h3 id = question></h3>
-                            <button id="answer1"></button>
-                            <button id="answer2"></button>
-                            <button id="answer3"></button>
-                            <button id="answer4"></button>
-                        </div>
-                    </div>
-                </div>
-        </div>
+            
     </body>
     <footer>
         <div class="card" style="width: 100%">

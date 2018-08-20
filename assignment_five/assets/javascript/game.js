@@ -20,42 +20,24 @@ $(document).ready(function () {
         },
 
         correctAnswers = {
-            question1 = 4,
-            question2 = 1,
-            question3 = 2,
-            question4 = 3,
-            question5 = 1,
-            question6 = 4,
-            question7 = 3,
-            question8 = 2,
-            question9 = 4,
-            question10 = 1,
-            question11 = 2,
-            question12 = 3,
+            answer1 : questions.question1[4],
+            answer2 : questions.question2[1],
+            answer3 : questions.question3[2],
+            answer4 : questions.question4[3],
+            answer5 : questions.question5[1],
+            answer6 : questions.question6[4],
+            answer7 : questions.question7[3],
+            answer8 : questions.question8[2],
+            answer9 : questions.question9[4],
+            answer10 : questions.question10[1],
+            answer11 : questions.question11[2],
+            answer12 : questions.question12[3],
         },
 
         correct = 0,
         wrong = 0,
 
 
-
-        // /* button_press = start game */
-        // //document.onkeyup = function (event) {
-        //     $(document).ready(function(){
-        //         $("start-btn").click(function(){
-        //             $(this).start();
-        //         }),
-        // //start-btn press show first question and start timer
-        // //need start function to execute start timer and multipleGuess function
-        // // start timer
-        // startTimer: function () {
-        //     setInterval(multipleGuess(), 10000);//<--need to add function
-        // },
-
-        // // Randomly chooses a choice from the norseGods array. This is the Computer's guess.
-        // var computerChoice = norseGods[Math.floor(Math.random() * norseGods.length)];
-        // console.log(questions[computerChoice][0]),
-        // // pop the question out of the norseGods array to eliminate duplicate quetions    
 
         startGame: function () {
 
@@ -80,8 +62,6 @@ $(document).ready(function () {
 
                 stopwatch.time = 0;
                 $("#display").html("00");
-                //  TODO: Change the "display" div to "00:00."
-
             },
 
             start: function () {
@@ -90,7 +70,7 @@ $(document).ready(function () {
                 if (!clockRunning) {
                     clockRunning = true;
                     intervalId = setInterval(stopwatch.count, 60000); //1 minute interval
-                }
+                };
 
             },
             stop: function () {
@@ -101,129 +81,41 @@ $(document).ready(function () {
             },
 
             count: function () {
-                //if button press before timer expires
-                //take selected button and determine if correct or incorrect
-                //flash message saying correct or incorrect
-                //increment the score of correct or incorrect
-                //if number of correct and incorrect !=6
-                //continue
-                //else end game
-                //else increment number of incorrect by 1
-                //if number of correct and incorrect !=6
-                //continue
-                //else end game
-                //  TODO: increment time by 1, remember we cant use "this" here.
                 stopwatch.time--;
                 if (stopwatch.time != 0) {
-                    //if all buttons clicked end game
+                    //if time doesn't equal 0, continue
 
-                } else if (stopwatch.time == 0) {
-                    //stop counter, tally totals, alert totals, end game
                 }
-                //  TODO: Use the variable you just created to show the converted time in the "display" div.
-                $("#display").html(stopwatch.time);
+                else if (stopwatch.time == 0) {
+                    //stop counter, tally totals, alert totals, end game
+                    $("#display").html(stopwatch.time);
+                    console.log(stopwatch.time);
+                };
             },
-
             //function to update multiple choice
             multipleGuess: function () {
+                $('.question-box').html("");
                 for (var j = 1; j < 12; j++) {
-                    question.questions[j].push(id + [i]);
-
-                    for (var i = 1; i < 4; i++) {
-                        var button = $("<button>");
-                        button.attr("id", answer[i])
-                        question.questions[j].append(button + [i]);
+                    $('.question-box').append($("<h4>" + questions[j].question + "</h4>"));
+                    for (var i = 1; i < questions[j].question[i].length; i++) {
+                        $('.question-box').append($("<input type='radio' value='" + questions[j].answers[i] + "' name='question-" + j + "'>" + questions[j].answers[i] + "<br>"));
                     }
-                }
+                    $('.question-box').append('<hr>');
+                };
             },
 
 
-            //push the question[0] to the question placeholder
-            //multipleGuess(game.norseGods.question[0]),
 
 
 
-
-
-
-            //         // update guessedLetters array
-            //         guessedLetters.push(event.key);
-            //         $(".display_guesses").html(dashes);
-            //         //checks dashes array for dashes to see if they have guessed all letters correctly
-            //         if(dashes.indexOf("_") == -1)  {
-            //         console.log('game won');
-            // //if there are no dashes, increment wins
-            // wins++;
-            // //if wins = 6, end the game
-            // if (wins == 6) {
-            //     alert("You know your Greek gods!");
-            //     // reset game
-            //     return;
-            // }
-            // //if wins don't equal 6, send message and continue
-            // else {
-            //     //document.getElemnetById("wins").innerHTML("You won this round!")
-            //     alert("You won this round!");
-            // }
-            //         }
-            //         //condition of picking the same letter more than once
-            //     } else if (guessedLetters.indexOf(key_guess) > -1) {
-            //     //do nothing if already guessed letter
-            //     alert("You already guessed that letter.");
-            //     console.log('already guessed');
-            // }
-            // //condition of incorrect new letter
-            // else if (computer_choice.indexOf(key_guess) === -1) {
-            //     console.log('wrong guess');
-            //     //update guessedLetters array
-            //     guessedLetters.push(event.key);
-            //     //update numOfGuesses -1  embed if statement to check for numOfGuesses = 0
-            //     numOfGuesses--;
-            //     //update hangman progression linked to the number of guesses remaining and change image
-            //     if (numOfGuesses == 5) {
-            //         $("#hangmanPic").attr("src", "./assets/images/Hangman-1.png");
-            //         $(".num_guesses_left").html("<a>You have 5 guesses left</a>");
-
-            //     }
-            //     else if (numOfGuesses == 3) {
-            //         $("#hangmanPic").attr("src", "./assets/images/Hangman-3.png");
-            //         $(".num_guesses_left").html("<a>You have 3 guesses left</a>");
-            //     }
-            //     //embedded if to control hint logic    
-            //     if (numOfGuesses == 0) {
-            //         losses++;
-            //         $("#hangmanPic").attr("src", "./assets/images/Hangman-6.png");
-            //         $(".num_guesses_left").html("<a>You have 0 guesses left</a>");
-            //         alert("You lost this round!");
-            //     }
-            //     else if (numOfGuesses == 4) {
-            //         $("#hangmanPic").attr("src", "./assets/images/Hangman-2.png");
-            //         $(".num_guesses_left").html("<a>You have 4 guesses left</a>");
-            //         console.log(hints[computerChoice][0]);
-            //         alert(hints[computerChoice][0]);
-
-            //     }
-            //     else if (numOfGuesses == 2) {
-            //         $("#hangmanPic").attr("src", "./assets/images/Hangman-4.png");
-            //         $(".num_guesses_left").html("<a>You have 2 guesses left</a>");
-            //         console.log(hints[computerChoice][1]);
-            //         alert(hints[computerChoice][1]);
-            //     }
-            //     else if (numOfGuesses == 1) {
-            //         $("#hangmanPic").attr("src", "./assets/images/Hangman-5.png");
-            //         $(".num_guesses_left").html("<a>You have 1 guess left</a>");
-            //         console.log(hints[computerChoice][2]);
-            //         alert(hints[computerChoice][2]);
-            //     }
-            // }
-
-
-        }
-    }
-    $("#start").click(function(){
-        game.startGame();
-    });
+        },
+    
+        $("#start").click(function () {
+            game.startGame();
+        }),
+    };
 });
+
 
 
 
