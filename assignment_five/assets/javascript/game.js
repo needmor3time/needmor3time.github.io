@@ -94,7 +94,7 @@ $(document).ready(function () {
                 //  TODO: Use clearInterval to stop the count here and set the clock to not be running.
                 clearInterval(game.intervalId);
                 console.log("interval after clear", game.intervalId);
-                submitGame();
+                //submitGame(); commenting out to prevent loop
             },
 
             count: function () {
@@ -107,6 +107,7 @@ $(document).ready(function () {
                         //stop time, tally totals, alert totals, end game
                         console.log("display time", this.time);
                         stop();
+                        this.submitGame();//adding submit game function when time is up
                     };
                     
 
@@ -147,6 +148,7 @@ $(document).ready(function () {
                         }
                     });  
                 }
+                this.stop();//adding stop function when submit is hit
                 $('.correct').text(correct);
                 $('.incorrect').text(incorrect);
                 $('.end-screen').show();
