@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Giftastic</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Animal search</h1>
+
+        <!-- Movies will get dumped here -->
+        <div id="animals-view"></div>
+
+        <form id="animal-form">
+            <label for="animal-input">Add an Animal</label>
+            <input type="text" id="animal-input">
+            <br>
+
+            <!-- Button triggers new animal to be added -->
+            <input id="add-animal" type="submit" value="Add an Animal">
+        </form>
+
+    <div id="gifs-appear-here"></div>
+
+        <img src="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200_s.gif" data-still="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200_s.gif"
+            data-animate="https://media1.giphy.com/media/3o85xkQpyMlnBkpB9C/200.gif" data-state="still" class="gif">
+        <img src="https://media2.giphy.com/media/8rFQp4kHXJ0gU/200_s.gif" data-still="https://media2.giphy.com/media/8rFQp4kHXJ0gU/200_s.gif"
+            data-animate="https://media2.giphy.com/media/8rFQp4kHXJ0gU/200.gif" data-state="still" class="gif">
+        <img src="https://media3.giphy.com/media/W6LbnBigDe4ZG/200_s.gif" data-still="https://media3.giphy.com/media/W6LbnBigDe4ZG/200_s.gif"
+            data-animate="https://media3.giphy.com/media/W6LbnBigDe4ZG/200.gif" data-state="still" class="gif">
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript">
+
+            // global variable
+            // --------------------------------------------------------------------
+            // Initial array of movies
+            var animals = ["Cat", "Dog", "bird"];
+
+
+            // functions
+            // --------------------------------------------------------------------
+            // Function for displaying movie data
+            function renderButtons() {
+
+                // Delete the content inside the animals-view div prior to adding new animals
+                // (this is necessary otherwise you will have repeat buttons)
+                $("#animals-view").empty();
+                // Loop through the array of movies, then generate buttons for each movie in the array
+                for (var i = 0; i < animals.length; i++) {
+                    var button = $("<button class = 'animalButton'>");
+                        console.log(animals[i]);
+                    button.text(animals[i]);
+                    console.log(button.text)
+                    $("#animals-view").append(button);
+                }
+                $("#animal-input").val("");
+            };
+            $(document).on("click", ".animalButton", function() {
+                $("#gifs-appear-here").empty();
+                var type = $(this).text();
+                console.log(type);
+                var queryURL = "https://api.giphy.com/v1/gifs/search?q=" + type + "&api_key=dc6zaTOxFJmzC&limit=10";
+
+                $.ajax({
+                    url: queryURL,
+                    method: "GET"
+                })
+                    .then(function(response) {
+                    var results = response.data;
+
+                    for (var i = 0; i < results.length; i++) {
+                        var gifDiv = $("<div class='item'>");
+
+                        var rating = results[i].rating;
+
+                        var p = $("<p>").text("Rating: " + rating);
+
+                        var still = results[i].images.fixed_height_still.url;
+                        var animalImage = $("<img class = 'gif'>");
+                        animalImage.attr("src", still); 
+
+                        var animated = results[i].images.fixed_height.url;
+                        animalImage.attr("data-animate", animated);
+
+                        
+                        animalImage.attr("data-still", still);
+
+                        animalImage.attr("data-state", "still");
+
+                        gifDiv.append(p);
+                        gifDiv.append(animalImage);
+
+                        $("#gifs-appear-here").append(gifDiv);
+                    }
+                    });
+            });
+
+            // This function handles events where the add movie button is clicked
+            $("#add-animal").on("click", function (event) {
+                // event.preventDefault() prevents submit button from trying to send a form.
+                // Using a submit button instead of a regular button allows the user to hit
+                // "Enter" instead of clicking the button if desired
+                event.preventDefault();
+
+                // Write code to grab the text the user types into the input field
+                var animal = $("#animal-input").val().trim();
+                // Write code to add the new movie into the movies array
+                animals.push(animal);
+                // The renderButtons function is called, rendering the list of movie buttons
+                renderButtons();
+             });
+
+            $(document).on("click", ".gif", function () {
+                //variable for data-state attribute
+                var state = $(this).attr("data-state");
+
+                 if (state == "still") {
+                    // then update the src attribute of this image to it's data-animate value,
+                    var animate = $(this).attr("data-animate");
+                    // and update the data-state attribute to 'animate'
+                    $(this).attr("src", animate);
+                    $(this).attr("data-state", "animate");
+                    // If state is equal to 'animate', then update the src attribute of this
+                } else if (state == "animate") {
+                    var still = $(this).attr("data-still");
+                    // image to it's data-still value and update the data-state attribute to 'still'
+                    $(this).attr("src", still);
+                    $(this).attr("data-state", "still");
+                }
+
+
+
+            });
+
+            // main process
+            // --------------------------------------------------------------------
+            // Calling the renderButtons function to display the initial list of animals
+            renderButtons();
+        </script>
+    </div>
+</body>
+
+</html>
