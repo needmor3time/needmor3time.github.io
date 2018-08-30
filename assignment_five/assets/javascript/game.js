@@ -97,27 +97,16 @@ $(document).ready(function () {
                 //submitGame(); commenting out to prevent loop
             },
 
-            count: function () {
-                //display time each time count fires (should be ever 1000ms)
-                $('.timer').text(this.time);
-                //if time doesn't equal 0, decrement time and check again for 0
-                if (this.time != 0) {
-                    this.time--;
-                    if (this.time == 0) {
-                        //stop time, tally totals, alert totals, end game
-                        console.log("display time", this.time);
-                        stop();
-                        this.submitGame();//adding submit game function when time is up
-                    };
+            
                     
 
-                }
+                
                 // else if (this.time == 0) {
                 //     //stop time, tally totals, alert totals, end game
                 //     console.log("this won't run", this.time);
                 //     stop();
                 // };
-            },
+            
             //function to update multiple choice
             multipleGuess: function () {
                 $('.question-box').html("");
@@ -126,7 +115,7 @@ $(document).ready(function () {
                     $('.question-box').append($("<h4>" + game.questions[j].question + "</h4>"));
                     for (var i = 0; i < game.questions[j].answers.length; i++) {
                         console.log("answers for each question", game.questions[j].answers[i]); 
-                        $('.question-box').append($("<input type='radio' value=' " + game.questions[j].answers[i] + "' name='question-" + j + "'>" + game.questions[j].answers[i] + "<br>"));
+                        $('.question-box').append($("<input type='radio' value='" + game.questions[j].answers[i] + "' name='question-" + j + "'>" + game.questions[j].answers[i] + "<br>"));
                     }
                     $('.question-box').append('<hr>');
                 };
@@ -152,6 +141,21 @@ $(document).ready(function () {
                 $('.correct').text(correct);
                 $('.incorrect').text(incorrect);
                 $('.end-screen').show();
+            },
+
+            count: function () {
+                //display time each time count fires (should be ever 1000ms)
+                $('.timer').text(this.time);
+                //if time doesn't equal 0, decrement time and check again for 0
+                if (this.time != 0) {
+                    this.time--;
+                    if (this.time == 0) {
+                        //stop time, tally totals, alert totals, end game
+                        console.log("display time", this.time);
+                        stop();
+                        submitGame();//adding submit game function when time is up
+                    };
+                };
             },
 
             newGame : function () {
