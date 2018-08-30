@@ -50,18 +50,20 @@ document.onkeyup = function (event) {
         for (var i=0; i<computer_choice.length; i++) {
             // console.log('computer choice: ' + computer_choice[i]);
             // console.log('user choice: ' + key_guess);
-            if(computer_choice[i] === key_guess) {
+            if(computer_choice[i] == key_guess) {
                 dashes[i] = key_guess;
             }
         }
         // update guessedLetters array
         guessedLetters.push(event.key);
+        console.log("correct guessedLetters", guessedLetters);
         $(".display_guesses").html(dashes);
         //checks dashes array for dashes to see if they have guessed all letters correctly
         if (dashes.indexOf("_") == -1)  {
             console.log('game won');
             //if there are no dashes, increment wins
             wins++;
+            $("#wins").html("<a id = 'wins'>Wins = "+ wins +"</a>");
             //if wins = 6, end the game
             if (wins == 6) {
                 alert("You know your Greek gods!");
@@ -81,10 +83,11 @@ document.onkeyup = function (event) {
         console.log('already guessed');
     }
     //condition of incorrect new letter
-    else if (computer_choice.indexOf(key_guess) === -1) {
+    else if (computer_choice.indexOf(key_guess) == -1) {
         console.log('wrong guess');
         //update guessedLetters array
         guessedLetters.push(event.key);
+        console.log("incorrect guessedLetters", guessedLetters);
         //update numOfGuesses -1  embed if statement to check for numOfGuesses = 0
         numOfGuesses--;
         //update hangman progression linked to the number of guesses remaining and change image
