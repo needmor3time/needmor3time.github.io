@@ -137,4 +137,8 @@
         /* .Portfolio_images {
             display: inline-block;
         } */
-
+#norse,
+#swift,
+#train  {
+    border: 1px solid blue;
+}
