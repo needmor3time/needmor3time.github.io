@@ -36,6 +36,7 @@ function resetGame () {
 
 function anotherRound () {
     alert("Do you want to play another round?");
+    $(".messages").html("Do you want to play another game?");
 };
 
 function newGame () {
