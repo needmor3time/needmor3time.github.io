@@ -1,18 +1,18 @@
 
 
-var greekGods = ["zuess", "hades", "posiden", "hera", "aphrodite", "hermes", "athena", "aries", "apollo", "kronus"];
+var greekGods = ["zeus", "hades", "poseiden", "hera", "aphrodite", "hermes", "athena", "ares", "apollo", "kronos"];
 
 var hints = {
-zuess : ["male", "oldest brother", "most powerful"],
+zeus : ["male", "oldest brother", "most powerful"],
 hades : ["male", "big three", "underworld"],
 poseiden : ["male", "big three", "water lover"],
 hera : ["female", "amazon enforcer", "wife of the big guy"],
 aphrodite : ["female", "fairest of the gods", "love not war"],
 hermes : ["male", "messenger", "florist symbol with winged feet"],
 athena : ["female", "warrior goddess", "patron of Athens"],
-ares : ["male", "Zuess’s son", "war god"],
-apollo : ["male", "Zuess’s son", "sun god"],
-kronus : ["male", "titan", "killed by his sons"]
+ares : ["male", "Zeus’s son", "war god"],
+apollo : ["male", "Zeus’s son", "sun god"],
+kronos : ["male", "titan", "killed by his sons"]
 }
 
 var wins = 0;
@@ -97,6 +97,9 @@ function newGame () {
                 //checks dashes array for dashes to see if they have guessed all letters correctly
                 if (dashes.indexOf(" _ ") == -1)  {
                     console.log('game won');
+                    $('.modal-title').html("<h5 class='modal-title'>You won this round!</h5>");
+                    $("#godPic").attr("src","./assets/images/" +computerChoice+ ".jpg");
+                    $("#godName").html("<p>" +computerChoice+ "</p>");
                     $('#myModal').modal('show');
                     //if there are no dashes, increment wins
                     wins++;
@@ -139,6 +142,10 @@ function newGame () {
                     losses++;
                     $("#hangmanPic").attr("src","./assets/images/Hangman-6.png");
                     $(".num_guesses_left").html("<a>You have 0 guesses left</a>");
+                    $('.modal-title').html("<h5 class='modal-title'>You lost this round!</h5>");
+                    $("#godPic").attr("src","./assets/images/" +computerChoice+ ".jpg");
+                    $("#godName").html("<p>" +computerChoice+ "</p>");
+                    $('#myModal').modal('show');
                     $("#messages").html("<p id = 'messagess'>You lost this round!</p>");
                     setTimeout(anotherRound, 3000);
                 }
