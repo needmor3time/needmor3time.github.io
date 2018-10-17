@@ -38,9 +38,9 @@ function start() {
               var choiceArray = [];
               for (var i = 0; i < results.length; i++) {
                 //create an object that will house key value pair of name and quantity, then that will be pushed to the array
-                var choiceObj = {name:results[i].product_name, quantity:results[i].stock_quantity};
-                //add quantity next to name
-                choiceArray.push(choiceObj.name + " " + choiceObj.quantity); //.name, choiceObj.quantity);
+                var choiceObj = {name:results[i].product_name, quantity:results[i].stock_quantity, price:results[i].price};
+                //add quantity next to name"
+                choiceArray.push(choiceObj.name + " " + choiceObj.quantity + " $" + choiceObj.price + "/ea"); //.name, choiceObj.quantity);
               }
               //return contents on choice array
               return choiceArray; 
@@ -63,22 +63,23 @@ function start() {
           // get the information of the chosen item
           var chosenItem;
           for (var i = 0; i < results.length; i++) {
-              var prodquant = results[i].product_name + " " + results[i].stock_quantity;
+              var prodquant = results[i].product_name + " " + results[i].stock_quantity + " $" + results[i].price + "/ea";
               //console.log("product + quantity", prodquant);
               //console.log("answer choice", answer.choice);
             if (prodquant === answer.choice) {
               chosenItem = results[i];
-              console.log(chosenItem);
+              //console.log(chosenItem);
             }
           };
   
           // determine if quantity in stock is enough
-          console.log("item quantity", chosenItem.stock_quantity);
+          //console.log("item quantity", chosenItem.stock_quantity);
           if (chosenItem.stock_quantity >= parseInt(answer.quantity)) {
             // quantity didn't exceed stock, so update db, let the user know, and start over
             console.log("item quantity", chosenItem.stock_quantity);
             var new_quantity = (chosenItem.stock_quantity - answer.quantity);
-            console.log(new_quantity);
+            console.log("Your purchase so far is $" + chosenItem.price * answer.quantity)
+            console.log("Quantity remaining " + new_quantity);
             connection.query(
               "UPDATE products SET ? WHERE ?",
               [
