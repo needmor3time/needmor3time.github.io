@@ -15,7 +15,7 @@ CREATE TABLE products(
 INSERT INTO products (product_name, department_name, price, stock_quantity)
 VALUES ("junk", "hoarding", 50, 2), ("stuff", "hoarding", 5, 30), ("clutter", "hoarding", 1, 100), ("funkorama", "hoarding", 75, 12), ("premium junk", "hoarding", 100, 4), ("premium stuff", "hoarding", 10, 60), ("premium clutter", "hoarding", 2, 200), ("funkorama", "hoarding", 75, 12), ("trinket", "momento", 15, 1), ("souvenir", "momento", 35, 5);
 
-ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password'products
+ALTER USER 'root'@'localhost' IDENTIFIED WITH mysql_native_password BY 'password' products
 
 USE bamazon;
 SELECT * FROM products WHERE product_name = "junk"
