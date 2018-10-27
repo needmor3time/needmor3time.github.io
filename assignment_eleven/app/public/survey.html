@@ -36,55 +36,143 @@
 
                     <div class="form-group">
                         <label for="">Name</label>
-                        <input type="text" class="form-control" id="reserve_name">
+                        <input type="text" class="form-control" id="name">
                     </div>
 
                     <div class="form-group">
-                        <label for="">Phone Number</label>
-                        <input type="text" class="form-control" id="reserve_phone">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="">Email</label>
-                        <input type="text" class="form-control" id="reserve_email">
-                    </div>
-
-                    <div class="form-group">
-                        <label for="">Unique ID</label>
-                        <input type="text" class="form-control" id="reserve_uniqueID">
+                        <label for="">Link</label>
+                        <input type="text" class="form-control" id="link">
                     </div>
 
                     <button type="submit" class="btn btn-primary submit">Submit</button>
                 </form>
 
             </div>
+            <div>
+                <h3><strong>Question 1</strong></h3>
+                <h4>Ok with other dogs?</h4>
+                <select class="chosen-select" id="q1">
+                  <option value=""></option>
+                  <option value="1">1 (Friends with all)</option>
+                  <option value="2">2</option>
+                  <option value="3">3 (Slow intros or particular dogs)</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Only dog)</option>
+                </select>
+            </div>
+            <div>
+                <h3><strong>Question 2</strong></h3>
+                <h4>Ok with cats?</h4>
+                <select class="chosen-select" id="q2">
+                  <option value=""></option>
+                  <option value="1">1 (Cat tested)</option>
+                  <option value="2">2</option>
+                  <option value="3">3 (Prey drive, needs to be tested)</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Absolutely not)</option>
+                </select>
+            </div>
+            <div>
+                <h3><strong>Question 3</strong></h3>
+                <h4>Needs exercise?</h4>
+                <select class="chosen-select" id="q3">
+                  <option value=""></option>
+                  <option value="1">1 (Very little)</option>
+                  <option value="2">2</option>
+                  <option value="3">3 (Walks twice a day)</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Lots)</option>
+                </select>
+            </div>
+            <div>
+                <h3><strong>Question 4</strong></h3>
+                <h4>Special needs?</h4>
+                <select class="chosen-select" id="q4">
+                  <option value=""></option>
+                  <option value="1">1 (No special needs)</option>
+                  <option value="2">2</option>
+                  <option value="3">3 (pills or or special diet)</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Medical/mental train wreck)</option>
+                </select>
+            </div>
+            <div>
+                <h3><strong>Question 5</strong></h3>
+                <h4>Age?</h4>
+                <select class="chosen-select" id="q5">
+                  <option value=""></option>
+                  <option value="1">1 (Puppy)</option>
+                  <option value="2">2</option>
+                  <option value="3">3 (3 to 5 years old)</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Older senior)</option>
+                </select>
+            </div>
+            <div>
+                <h3><strong>Question 6</strong></h3>
+                <h4>Ok with children?</h4>
+                <select class="chosen-select" id="q6">
+                  <option value=""></option>
+                  <option value="1">1 (Loves kids)</option>
+                  <option value="2">2</option>
+                  <option value="3">3 (older kids or slow intros)</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (no kids, adults only)</option>
+                </select>
+            </div>
+            <div>
+                <h3><strong>Question 7</strong></h3>
+                <h4>Size, by ideal weight?</h4>
+                <select class="chosen-select" id="q7">
+                  <option value=""></option>
+                  <option value="1">1 (Under 100lbs)</option>
+                  <option value="2">2 (100-130lbs)</option>
+                  <option value="3">3 (135-165lbs)</option>
+                  <option value="4">4 (170-200lbs)</option>
+                  <option value="5">5 (Over 200lbs)</option>
+                </select>
+            </div>
+            <div>
+                <h3><strong>Question 8</strong></h3>
+                <h4>Length/Quantity of fur?</h4>
+                <select class="chosen-select" id="q8">
+                  <option value=""></option>
+                  <option value="1">1 (Short, thin fur)</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Lots of long fur)</option>
+                </select>
+            </div>
+            <div>
+                <h3><strong>Question 9</strong></h3>
+                <h4>Food motivated?</h4>
+                <select class="chosen-select" id="q9">
+                  <option value=""></option>
+                  <option value="1">1 (Doesn't care)</option>
+                  <option value="2">2</option>
+                  <option value="3">3 (Average motivation)</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Lives for food/treats)</option>
+                </select>
+            </div>
+            <div>
+                <h3><strong>Question 10</strong></h3>
+                <h4>Protective?</h4>
+                <select class="chosen-select" id="q10">
+                  <option value=""></option>
+                  <option value="1">1 (Doesn't protect anything)</option>
+                  <option value="2">2</option>
+                  <option value="3">3 (Protects some things, food or toys)</option>
+                  <option value="4">4</option>
+                  <option value="5">5 (Very possessive/protective of attention, food, toys)</option>
+                </select>
+            </div>
         </div>
 
     </div>
 
 
-<!-- <div class="row">
-    <div class="col-lg-12">-->
-
-        <!-- Current Tables in Use 
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">Current Reservations</h4>
-            </div>
-            <div class="panel-body" id="tableSection">
-            <div class="well" id="tableWell-01"><h2><span class="label label-primary">1</span> | afhaque89</h2></div><div class="well" id="tableWell-11"><h2><span class="label label-primary">2</span> | 846</h2></div><div class="well" id="tableWell-21"><h2><span class="label label-primary">3</span> | 6666666666</h2></div><div class="well" id="tableWell-31"><h2><span class="label label-primary">4</span> | 00001</h2></div><div class="well" id="tableWell-41"><h2><span class="label label-primary">5</span> | 62090</h2></div></div>
-        </div>-->
-
-        <!-- Waiting List Panel 
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">Waiting List</h4>
-            </div>
-            <div class="panel-body" id="waitlistSection">
-            <div class="well" id="waitlistWell-01"><h2><span class="label label-primary">1</span> | saimacool</h2></div><div class="well" id="waitlistWell-11"><h2><span class="label label-primary">2</span> | MJane</h2></div><div class="well" id="waitlistWell-21"><h2><span class="label label-primary">3</span> | 15</h2></div><div class="well" id="waitlistWell-31"><h2><span class="label label-primary">4</span> | maria</h2></div><div class="well" id="waitlistWell-41"><h2><span class="label label-primary">5</span> | Rabbit</h2></div><div class="well" id="waitlistWell-51"><h2><span class="label label-primary">6</span> | SuperManSucks</h2></div><div class="well" id="waitlistWell-61"><h2><span class="label label-primary">7</span> | ironman1</h2></div><div class="well" id="waitlistWell-71"><h2><span class="label label-primary">8</span> | no</h2></div><div class="well" id="waitlistWell-81"><h2><span class="label label-primary">9</span> | 923409</h2></div><div class="well" id="waitlistWell-91"><h2><span class="label label-primary">10</span> | jarvis</h2></div><div class="well" id="waitlistWell-101"><h2><span class="label label-primary">11</span> | timl</h2></div><div class="well" id="waitlistWell-111"><h2><span class="label label-primary">12</span> | gmbk</h2></div><div class="well" id="waitlistWell-121"><h2><span class="label label-primary">13</span> | 11223344</h2></div><div class="well" id="waitlistWell-131"><h2><span class="label label-primary">14</span> | 801</h2></div><div class="well" id="waitlistWell-141"><h2><span class="label label-primary">15</span> | yourmom</h2></div><div class="well" id="waitlistWell-151"><h2><span class="label label-primary">16</span> | </h2></div><div class="well" id="waitlistWell-161"><h2><span class="label label-primary">17</span> | asdf</h2></div><div class="well" id="waitlistWell-171"><h2><span class="label label-primary">18</span> | 142563</h2></div><div class="well" id="waitlistWell-181"><h2><span class="label label-primary">19</span> | 1245</h2></div><div class="well" id="waitlistWell-191"><h2><span class="label label-primary">20</span> | 6789</h2></div></div>
-        </div>
-    </div>
-</div> -->
 
 <footer class="footer">
     <div class="container">
@@ -96,21 +184,21 @@
 
 
   <script type="text/javascript">
-    // Question: What does this code do?
-    $("#add-btn").on("click", function(event) {
+    // On submit button, gather values
+    $(".submit").on("click", function(event) {
       event.preventDefault();
-      var newReservation = {
-        name: $("#reserve_name").val().trim(),
-        phone_num: $("#reserve_phone").val().trim(),
-        email: $("#reserve_email").val().trim(),
-        unique_id: $("#reserve_uniqueID").val().trim()
+      var newAdopter = {
+        name: $("#name").val().trim(),
+        link: $("#link").val().trim(),
+        scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val()]
       };
+      console.log("new adopter info", newAdopter);
 
-      // Question: What does this code do??
-      $.post("/api/reservation", newReservation)
+      // posting information
+      $.post("/api/friends", newAdopter)
         .then(function(data) {
-          console.log("reservation.html", data);
-          alert("Adding reservation...");
+          console.log("dogfinder.html", data);
+          alert("Adding adopter information...");
         });
     });
   </script>

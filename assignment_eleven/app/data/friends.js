@@ -1,4 +1,4 @@
-var friends = [
+var furryFriends = [
     {"name":"Aristote",
     "photo":"http://bigdogshugepaws.com/adoption/available-dogs/aristotle-neapolitan-mastiff-new-to-rescue-under-evaluation",
     "scores":[
@@ -46,4 +46,4 @@ var friends = [
   
 ]
 
-module.exports = friends;
+module.exports = furryFriends;

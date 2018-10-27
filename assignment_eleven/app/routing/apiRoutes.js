@@ -1,11 +1,26 @@
-var friends = require("../data/friends.js");
+var furryFriends = require("../data/friends.js");
 module.exports = function(app) {
     app.get("/api/friends", function(req, res) {
-        res.json(friends);
+        res.json(furryFriends);
     });
 
     app.post("/api/friends", function(req, res) {
-
+        var newAdopter = req.body
+        //console.log("request: ", req);
+        var bestDog = {
+            name: "",
+            photo: "",
+            bestScore: 50
+        };
+        for (var i=0; i < furryFriends.length; i++ ) {
+            var currentDog = furryFriends[i];
+            for(var j=0; j < currentDog.scores.length; j++) {
+                var dogScore = currentDog.scores[j];
+                dogScore Math.abs // <-- absolute value
+            }
+        }
+        //
+        console.log("new adopter info console", newAdopter);
     });
   }
 
