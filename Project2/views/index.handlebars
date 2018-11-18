@@ -1,0 +1,590 @@
+    <!-- Jumbotron -->
+    <div class="jumbotron jumbotron-fluid">
+        <div class="container">
+            <h1 class="title">Bark Finder</h1>
+            <p class="lead">Where you can find your new best friend!</p>
+            <p class="lead">We match you with an adoptable dog from a shelter near you.</p>
+        </div>
+    </div>
+    <!-- Left Carousel -->
+    <div class="container">
+        <div class="row">
+            <div class="col-sm">
+                <div id="carouselLeft" class="carousel slide" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img class="d-block w-100" src="/assets/images/mas-puppy.png" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="/assets/images/cc.png" alt="">
+                        </div>
+                        <div class="carousel-item">
+                            <img class="d-block w-100" src="/assets/images/gd.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Button trigger modal -->
+            <div class="col-sm">
+                <button type="button" class="btn btn-lg" data-toggle="modal" data-target="#myModal1">
+                    Start Quiz
+                </button>
+            </div>
+            <!-- Right Carousel -->
+            <div class="col-sm">
+                <div class="row">
+                    <div class="col-sm" id="paw">
+                        <div id="carouselRight" class="carousel slide" data-ride="carousel">
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <img class="d-block w-100" src="/assets/images/mas-puppy.png" alt="Puppy">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="/assets/images/cc.png" alt="Group of Dogs">
+                                </div>
+                                <div class="carousel-item">
+                                    <img class="d-block w-100" src="/assets/images/gd.png" alt="Dalmation">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Modal -->
+    <div class="modal fade" id="myModalLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Please login to take the quiz</h4>
+                </div>
+                <div class="modal-body row">
+                    <div class="col-md-6 login">
+                        <form class="loginForm">
+                                <div class="form-group">
+                                  <!-- <label id="emailInput">Email address</label> -->
+                                  <input type="email" class="form-control" id="email-input" placeholder="Email">
+                                </div>
+                                <div class="form-group">
+                                  <!-- <label id="passwordInput">Password</label> -->
+                                  <input type="password" class="form-control" id="password-input" placeholder="Password">
+                                </div>
+                                <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+                                  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                                  <span class="sr-only">Error:</span> <span class="msg"></span>
+                                </div>
+                                <button type="submit" class="btn btn-info">Login</button>
+                              </form>
+                    </div>
+                    <div class="col-md-6 image">
+                        <img class="modal-image w-100" src="/assets/images/bernese-puppy.png" alt="">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <p>Not a member yet?</p>
+                    <button type="submit" class="btn btn-info" data-toggle="modal" data-target="#signUp" data-dismiss="modal">Sign Up</button>
+                    <!-- <button type="button" class="btn btn-default" data-target="#myModalMember">Login</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+ <!-- signup model -->
+ <div class="modal fade" data-controls-modal="signUp" data-backdrop="static" data-keyboard="false" id="signUp" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Sign Up Form</h5>
+            </div>
+            <div class="modal-body" id="myModalSignUp">
+              <form class="signup">
+                <div class="form-group">
+                  <input type="email" class="form-control" id="email-input" placeholder="Email">
+                  
+                </div>
+                <div class="form-group">
+                  
+                  <input type="password" class="form-control" id="password-input" placeholder="Password">
+                </div>
+                <div style="display: none" id="alert" class="alert alert-danger" role="alert">
+                  <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
+                  <span class="sr-only">Error:</span> <span class="msg"></span>
+                </div>
+                <button type="button" class="btn btn-info">Sign Up</button>
+              </form>
+            </div>
+            <div class="modal-footer">
+                <p>Already a member?</p>
+                <button type="submit" class="btn btn-info" data-toggle="modal" data-target="#myModalLogin" data-dismiss="modal">Login</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    <!-- Q1 Modal -->
+    <div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Question 1/10</h4>
+                </div>
+                <div class="modal-body row">
+                    <div class="col-md-6 question">
+                        <p class="modal-q">Good with other dogs?</p>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"> 1 (Friends
+                            with all)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"> 2
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"> 3 (Slow
+                            intros or particular dogs)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4"> 4
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5"> 5 (Only
+                            dog)
+                        </label>
+                    </div>
+                    <div class="col-md-6 image">
+                        <img class="modal-image w-100" src="/assets/images/gd2.png" alt="">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-next">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Q2 Modal -->
+    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Question 2/10</h4>
+                </div>
+                <div class="modal-body row">
+                    <div class="col-md-6 question">
+                        <p class="modal-q">Good with cats?</p>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"> 1 (Cat
+                            tested and approved)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"> 2
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"> 3 (Prey
+                            drive, needs to be tested still)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4"> 4
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5"> 5
+                            (Absolutely not)
+                        </label>
+                    </div>
+                    <div class="col-md-6 image">
+                        <img class="modal-image w-100" src="/assets/images/scot-deerhound.png" alt="">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-next">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Q3 Modal -->
+    <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Question 3/10</h4>
+                </div>
+                <div class="modal-body row">
+                    <div class="col-md-6 question">
+                        <p class="modal-q">Exercise needs?</p>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"> 1 (Very
+                            little)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"> 2
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"> 3 (Walks
+                            twice a day)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4"> 4
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5"> 5 (Lots)
+                        </label>
+                    </div>
+                    <div class="col-md-6 image">
+                        <img class="modal-image w-100" src="/assets/images/Newfoundland-dog.png" alt="">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-next">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Q4 Modal -->
+    <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel"> Question 4/10</h4>
+                </div>
+                <div class="modal-body row">
+                    <div class="col-md-6 question">
+                        <p class="modal-q">Special needs?</p>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"> 1 (No
+                            special needs)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"> 2
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"> 3 (Special
+                            diet or pills okay)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4"> 4
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5"> 5 (Severe
+                            medical or mental issues okay)
+                        </label>
+                    </div>
+                    <div class="col-md-6 image">
+                        <img class="modal-image w-100" src="/assets/images/sb.png" alt="">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-next">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Q5 Modal -->
+    <div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Question 5/10</h4>
+                </div>
+                <div class="modal-body row">
+                    <div class="col-md-6 question">
+                        <p class="modal-q">What age range do you prefer?</p>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"> 1 (less
+                            than 1 year old)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"> 2 (1-3
+                            years old)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"> 3 (4-6
+                            years old)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4"> 4 (7-9
+                            years old)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5"> 5 (Senior
+                            10+)
+                        </label>
+                    </div>
+                    <div class="col-md-6 image">
+                        <img class="modal-image w-100" src="/assets/images/german-shep.png" alt="">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-next">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Q6 Modal -->
+    <div class="modal fade" id="myModal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Question 6/10</h4>
+                </div>
+                <div class="modal-body row">
+                    <div class="col-md-6 question">
+                        <p class="modal-q">Good with children?</p>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"> 1 (Loves
+                            kids)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"> 2
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"> 3 (Older
+                            kids or slow intros)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4"> 4
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5"> 5 (No
+                            kids)
+                        </label>
+                    </div>
+                    <div class="col-md-6 image">
+                        <img class="modal-image w-100" src="/assets/images/bloodhound.png" alt="">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-next">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Q7 Modal -->
+    <div class="modal fade" id="myModal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Question 7/10</h4>
+                </div>
+                <div class="modal-body row">
+                    <div class="col-md-6 question">
+                        <p class="modal-q">Size by ideal weight?</p>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"> 1 (Under
+                            100lbs)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"> 2
+                            (100-130lbs)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"> 3
+                            (135-165lbs)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4"> 4
+                            (170-200lbs)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5"> 5 (Over
+                            200lbs)
+                        </label>
+                    </div>
+                    <div class="col-md-6 image">
+                        <img class="modal-image w-100" src="/assets/images/kuvasz.png" alt="">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-next">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Q8 Modal -->
+    <div class="modal fade" id="myModal8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Question 8/10</h4>
+                </div>
+                <div class="modal-body row">
+                    <div class="col-md-6 question">
+                        <p class="modal-q">Length/Quantity of fur?</p>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"> 1 (Short,
+                            thin fur)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"> 2
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"> 3
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4"> 4
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5"> 5 (Lots of
+                            long fur)
+                        </label>
+                    </div>
+                    <div class="col-md-6 image">
+                        <img class="modal-image w-100" src="/assets/images/tibetan-mastiff.png" alt="">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-next">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Q9 Modal -->
+    <div class="modal fade" id="myModal9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Question 9/10</h4>
+                </div>
+                <div class="modal-body row">
+                    <div class="col-md-6 question">
+                        <p class="modal-q">Food motivated?</p>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"> 1 (Doesn't
+                            care)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"> 2
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"> 3 (Average
+                            motivation)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4"> 4
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5"> 5 (Lives
+                            for food or treats)
+                        </label>
+                    </div>
+                    <div class="col-md-6 image">
+                        <img class="modal-image w-100" src="/assets/images/weimaraner.png" alt="">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-next">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Q10 Modal -->
+    <div class="modal fade" id="myModal10" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Question 10/10</h4>
+                </div>
+                <div class="modal-body row">
+                    <div class="col-md-6 question">
+                        <p class="modal-q">Protective?</p>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1"> 1 (Doesn't
+                            protect anything)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2"> 2
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3"> 3
+                            (Protects some things, food or toys)
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio4" value="4"> 4
+                        </label>
+                        <br>
+                        <label class="radio-inline">
+                            <input type="radio" name="inlineRadioOptions" id="inlineRadio5" value="5"> 5 (Very
+                            possessive/protective of attention, food, toys)
+                        </label>
+                    </div>
+                    <div class="col-md-6 image">
+                        <img class="modal-image w-100" src="/assets/images/alaskan-malamute.png" alt="">
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default btn-next">Submit</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Results Modal -->
+    <div class="modal fade" id="myModalResult" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Meet Your New Best Friend!</h4>
+                </div>
+                <div class="modal-body row">
+                    <div class="col-md-6 question">
+                        <p class="modal-result">test</p>
+                    </div>
+                    <div class="col-md-6 image">
+                        <img class="modal-image w-100" src="/assets/images/Newfoundland-dog.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <nav class="navbar fixed-bottom navbar-dark">
+        <a class="navbar-brand">&copy Bark Finder 2018</a>
+        <a href="/admin">Admin Page</a>
+    </nav>

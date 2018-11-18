@@ -1,0 +1,118 @@
+li {
+  padding: 5px;
+  margin: 5px;
+  background: #faebd7;
+}
+
+.label {
+  font-weight: bold;
+}
+
+.create-update-form {
+  padding: 5px;
+  margin: 5px;
+  background: aqua;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+/* THIS IS JAMIE's CODE FROM HIS CSS FILE */
+.jumbotron-fluid {
+  background: url('../images/banner.png');
+  background-repeat: no-repeat; 
+  background-position: center;
+  background-attachment: fixed;       
+  webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height:100%;
+  width:100%; 
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.title {
+  text-align: center;
+  font-family: 'Patua One', cursive;
+  font-size: 8em;
+  text-shadow: 3px 1px 1px rgba(56,80,164,0.71);
+}
+
+.lead {
+  text-align: center;
+  font-size: 2em;
+  font-family: 'Lalezar', cursive;
+  color: darkslategray;
+  line-height: 1em;
+}
+
+/* Quiz button */
+.btn.btn-lg {
+  margin-top: 60px;
+  padding-left: 50px;
+  padding-right: 50px;
+  font-family: 'Patua One', cursive;
+  font-size: 5em;
+  min-width: 300px;
+  color: white;
+  background-color: steelblue;
+}
+
+/* Login Modal */
+.container.login {
+  text-align: center;
+}
+
+input {
+  margin-left: 10px;
+  margin-top: 20px;
+}
+
+.col-md-6.login {
+  text-align: center;
+}
+
+/* Modal Questions */
+.modal-q {
+  font-size: 2em;
+  font-family: 'Basic', sans-serif;
+}
+
+.radio-inline {
+  font-size: 1.1em;
+  font-family: 'Basic', sans-serif;
+}
+
+/* Modal Buttons */
+.btn-next {
+  cursor: pointer;
+  background-color: steelblue;
+  color: white;
+}
+
+.btn-prev {
+  cursor: pointer;
+}
+
+/* Footer */
+.fixed-bottom {
+  text-align: center;
+  font-family: 'Lalezar', cursive;
+  font-size: medium;
+  color: lightslategray;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  background-color: lightsteelblue;
+}
+
+/* Media Query */
+@media (max-width:800px) {
+  #carouselLeft{
+      display:none !important;
+  }
+  #carouselRight{
+      display:none !important;
+  }
+}

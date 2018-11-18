@@ -1,0 +1,121 @@
+<h1>Dogs!</h1>
+
+<h2>Dogs that are not adopted!</h2>
+
+<ul>
+  {{#each dogs}}
+    <h2>{{name}}</h2>
+      {{> dogs/dog-block adopt=true}}
+
+  {{/each}}
+</ul>
+
+<h2>Dogs that are adopted!</h2>
+
+<ul>
+  {{#each dogs}}
+    {{!-- {{#if adopted--}}
+      <h2>{{name}}</h2>
+      {{> dogs/dog-block adopt=false}}
+    {{!--{{/if--}}
+  {{/each}}
+</ul>
+
+<h2>Add a dog</h2>
+<form class="create-form">
+
+  <div class="form-group">
+    <label for="ca">Dog Name:</label>
+    <input type="text" id="ca" name="name">
+  </div>
+
+  <div class="form-group">
+    <label for="adopted">Adopted?</label><br>
+    <input type="radio" name="adopted" value="1" checked> Adopted!<br>
+    <input type="radio" name="adopted" value="0"> Not adopted
+  </div>
+  
+  <div class="form-group">
+    <label for="q1">Age:</label>
+    <input type="text" id="q1" name="age">
+  </div>
+    
+  <div class="form-group">
+    <label for="q2">Gender:</label>
+    <input type="radio" name="gender" value="1"> Male<br>
+    <input type="radio" name="gender" value="0" checked> Female
+  </div>
+    
+  <div class="form-group">
+    <label for="q3">Big dog experience:</label>
+    <input type="radio" name="experience" value="1"> Giant breed experience required<br>
+    <input type="radio" name="experience" value="0" checked> Not required
+  </div>
+    
+  <div class="form-group">
+    <label for="q4">Status:</label>
+    <input type="text" id="q4" name="status">
+  </div>
+    
+  <div class="form-group">
+    <label for="q5">Good with other dogs:</label>
+    <input type="number" id="q5" name="other_dogs" min="1" max="5">
+  </div>
+      
+  <div class="form-group">
+    <label for="q6">Good with cats:</label>
+    <input type="number" id="q6" name="cats" min="1" max="5">
+  </div>
+      
+  <div class="form-group">
+    <label for="q7">Good with children:</label>
+    <input type="number" id="q7" name="children" min="1" max="5">
+  </div>
+      
+  <div class="form-group">
+    <label for="q8">Amount/quantity:</label>
+    <input type="number" id="q8" name="fur" min="1" max="5">
+  </div>
+      
+  <div class="form-group">
+    <label for="q9">Good with other dogs:</label>
+    <input type="number" id="q9" name="other_dogs" min="1" max="5">
+  </div>
+      
+  <div class="form-group">
+    <label for="q10">Food motivated:</label>
+    <input type="number" id="q10" name="food" min="1" max="5">
+  </div>
+      
+  <div class="form-group">
+    <label for="q11">How much exercise:</label>
+    <input type="number" id="q11" name="exercise" min="1" max="5">
+  </div>
+      
+  <div class="form-group">
+    <label for="q12">Special needs:</label>
+    <input type="number" id="q12" name="special" min="1" max="5">
+  </div>
+      
+  <div class="form-group">
+    <label for="q13">Size by ideal weight:</label>
+    <input type="number" id="q13" name="size" min="1" max="5">
+  </div>
+      
+  <div class="form-group">
+    <label for="q14">Protective:</label>
+    <input type="number" id="q14" name="protective" min="1" max="5">
+  </div>
+      
+  <div class="form-group">
+    <label for="q15">Link to picture:</label>
+    <input type="number" id="q15" name="picture" min="1" max="5">
+  </div>
+      
+  <div class="form-group">
+    <label for="q16">Link to profile:</label>
+    <input type="number" id="q16" name="profile" min="1" max="5">
+  </div>
+
+  <button type="submit">Add dog</button>
+</form>

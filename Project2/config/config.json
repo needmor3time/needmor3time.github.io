@@ -1,0 +1,24 @@
+{
+  "development": {
+    "username": "qjurcdcciq0yblgc",
+    "password": "e0wstehbvnelagvf",
+    "database": "ypgck54ufpkcdtbf",
+    "host": "u28rhuskh0x5paau.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "root",
+    "password": "password",
+    "database": "barkfinder_db",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "qjurcdcciq0yblgc",
+    "password": "e0wstehbvnelagvf",
+    "database": "ypgck54ufpkcdtbf",
+    "host": "u28rhuskh0x5paau.cbetxkdyhwsb.us-east-1.rds.amazonaws.com",
+    "port": 3306,
+    "dialect": "mysql"
+  }
+}
