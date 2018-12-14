@@ -6,6 +6,6 @@ var path = require("path");
     });
 
     app.get("*", function(req, res) {
-        res.sendFile(path.join(__dirname, "../public/survey.html"));
+        res.sendFile(path.join(__dirname, "../public/home.html")); //<--change to home if we want a separate page
     });
   }

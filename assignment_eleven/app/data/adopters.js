@@ -1,7 +1,6 @@
 var Adopters = [
     {"name":"Doug",
-    "photo":"http://bigdogshugepaws.com/adoption/available-dogs/aristotle-neapolitan-mastiff-new-to-rescue-under-evaluation",
-    "scores":[
+        "scores":[
         1,
         2,
         2,
@@ -15,8 +14,7 @@ var Adopters = [
     ]},
 
     {"name":"Carroll",
-    "photo":"http://bigdogshugepaws.com/adoption/available-dogs/justice-english-mastiff-new-to-rescue-under-evaluation",
-    "scores":[
+       "scores":[
         1,
         2,
         3,
@@ -30,8 +28,7 @@ var Adopters = [
     ]},
 
     {"name":"Kasey",
-    "photo":"http://bigdogshugepaws.com/adoption/available-dogs/black-cherry-great-dane-mix",
-    "scores":[
+        "scores":[
         1,
         1,
         1,

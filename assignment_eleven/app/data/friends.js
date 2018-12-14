@@ -1,6 +1,7 @@
 var furryFriends = [
     {"name":"Aristote",
-    "photo":"http://bigdogshugepaws.com/adoption/available-dogs/aristotle-neapolitan-mastiff-new-to-rescue-under-evaluation",
+    "photo":"http://bigdogshugepaws.com/sites/default/files/u4728/47070974_1086399028232878_3005462605859913728_o.jpg",
+    "link":"http://bigdogshugepaws.com/adoption/available-dogs/aristotle-neapolitan-mastiff-new-to-rescue-under-evaluation",
     "scores":[
         1,
         2,
@@ -15,7 +16,8 @@ var furryFriends = [
     ]},
 
     {"name":"Justice",
-    "photo":"http://bigdogshugepaws.com/adoption/available-dogs/justice-english-mastiff-new-to-rescue-under-evaluation",
+    "photo":"http://bigdogshugepaws.com/sites/default/files/u4728/image2_7.jpeg",
+    "link":"http://bigdogshugepaws.com/adoption/available-dogs/justice-english-mastiff-new-to-rescue-under-evaluation",
     "scores":[
         1,
         2,
@@ -29,8 +31,9 @@ var furryFriends = [
         2
     ]},
 
-    {"name":"Black Cherry",
-    "photo":"http://bigdogshugepaws.com/adoption/available-dogs/black-cherry-great-dane-mix",
+    {"name":"Minerva",
+    "photo":"http://bigdogshugepaws.com/sites/default/files/u4728/Norman%20AW%202.jpg",
+    "link":"http://bigdogshugepaws.com/adoption/available-dogs/minerva-cane-corso-new-to-rescue-under-evaluation",
     "scores":[
         1,
         1,

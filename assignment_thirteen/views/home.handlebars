@@ -1,0 +1,22 @@
+<h1>NRA articles</h1>
+<div>{{#each articles}}
+    <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <a href={{this.link}} class="card-link" target="_blank">
+                <h5 class="card-title">{{this.title}}</h5>
+            </a>
+            <button type="button" data-id={{this._id}} class="btn btn-primary note" style="display:block">Add note</button>
+            <div class="input-group mb-3" style="display:none">
+                <input type="text" class="form-control" placeholder="Note on article" aria-label="Article note"
+                    aria-describedby="button-addon2">
+                <div class="input-group-append">
+                    <button class="btn btn-outline-secondary save" type="button" id="button-addon2">Save</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+<div class="notes">
+    
+</div>

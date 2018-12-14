@@ -1,29 +1,34 @@
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Survey</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+        crossorigin="anonymous">
     <script src="https://code.jquery.com/jquery.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+        crossorigin="anonymous"></script>
 </head>
+
 <body>
 
-<div class="jumbotron">
-    <h1 class="text-center"><span class="glyphicon glyphicon-fire"></span> Big Dog Friend Finder</h1>
-    <hr>
-    <h2 class="text-center">Finding your perfect furry best friend</h2>
-    <br>
+    <div class="jumbotron">
+        <h1 class="text-center"><span class="glyphicon glyphicon-fire"></span> Big Dog Friend Finder</h1>
+        <hr>
+        <h2 class="text-center">Finding your perfect furry best friend</h2>
+        <br>
 
-    <div class="text-center">
-        <a href="/survey"><button type="button" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-credit-card"></span> Fiend survey</button></a>
-        <a href="/"><button type="button" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-home"></span></button></a>
+        <div class="text-center">
+            <!-- <a href="/survey"><button type="button" class="btn btn-lg btn-danger"><span class="glyphicon glyphicon-credit-card"></span> Fiend survey</button></a> -->
+            <a href="/"><button type="button" class="btn btn-lg btn-default"><span class="glyphicon glyphicon-home"></span></button></a>
+        </div>
     </div>
-</div>
 
-<div class="col-lg-12">
+    <div class="col-lg-12">
 
         <!-- Reservation Page -->
         <div class="panel panel-default">
@@ -39,171 +44,224 @@
                         <input type="text" class="form-control" id="name">
                     </div>
 
-                    <div class="form-group">
-                        <label for="">Link</label>
-                        <input type="text" class="form-control" id="link">
-                    </div>
-
                     <button type="submit" class="btn btn-primary submit">Submit</button>
                 </form>
 
             </div>
-            <div>
-                <h3><strong>Question 1</strong></h3>
-                <h4>Ok with other dogs?</h4>
-                <select class="chosen-select" id="q1">
-                  <option value=""></option>
-                  <option value="1">1 (Friends with all)</option>
-                  <option value="2">2</option>
-                  <option value="3">3 (Slow intros or particular dogs)</option>
-                  <option value="4">4</option>
-                  <option value="5">5 (Only dog)</option>
-                </select>
+            <div class="row">
+                <div class="col-sm-4" style="text-align:center">
+                    <div>
+                        <h3><strong>Question 1</strong></h3>
+                        <h4>Ok with other dogs?</h4>
+                        <select class="chosen-select" id="q1">
+                            <option value=""></option>
+                            <option value="1">1 (Friends with all)</option>
+                            <option value="2">2</option>
+                            <option value="3">3 (Slow intros or particular dogs)</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Only dog)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-4" style="text-align:center">
+                    <div>
+                        <h3><strong>Question 2</strong></h3>
+                        <h4>Ok with cats?</h4>
+                        <select class="chosen-select" id="q2">
+                            <option value=""></option>
+                            <option value="1">1 (Cat tested)</option>
+                            <option value="2">2</option>
+                            <option value="3">3 (Prey drive, needs to be tested)</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Absolutely not)</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-sm-4" style="text-align:center">
+                    <div>
+                        <h3><strong>Question 3</strong></h3>
+                        <h4>Needs exercise?</h4>
+                        <select class="chosen-select" id="q3">
+                            <option value=""></option>
+                            <option value="1">1 (Very little)</option>
+                            <option value="2">2</option>
+                            <option value="3">3 (Walks twice a day)</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Lots)</option>
+                        </select>
+                    </div>
+                </div>
             </div>
-            <div>
-                <h3><strong>Question 2</strong></h3>
-                <h4>Ok with cats?</h4>
-                <select class="chosen-select" id="q2">
-                  <option value=""></option>
-                  <option value="1">1 (Cat tested)</option>
-                  <option value="2">2</option>
-                  <option value="3">3 (Prey drive, needs to be tested)</option>
-                  <option value="4">4</option>
-                  <option value="5">5 (Absolutely not)</option>
-                </select>
+
+            <div class="row">
+                    <div class="col-sm-4" style="text-align:center">
+                        <div>
+                            <h3><strong>Question 4</strong></h3>
+                            <h4>Special needs?</h4>
+                            <select class="chosen-select" id="q4">
+                                <option value=""></option>
+                                <option value="1">1 (No special needs)</option>
+                                <option value="2">2</option>
+                                <option value="3">3 (pills or or special diet)</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Medical/mental train wreck)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-4" style="text-align:center">
+                        <div>
+                            <h3><strong>Question 5</strong></h3>
+                            <h4>Age?</h4>
+                            <select class="chosen-select" id="q5">
+                                <option value=""></option>
+                                <option value="1">1 (Puppy)</option>
+                                <option value="2">2</option>
+                                <option value="3">3 (3 to 5 years old)</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Older senior)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-4" style="text-align:center">
+                        <div>
+                            <h3><strong>Question 6</strong></h3>
+                            <h4>Ok with children?</h4>
+                            <select class="chosen-select" id="q6">
+                                <option value=""></option>
+                                <option value="1">1 (Loves kids)</option>
+                                <option value="2">2</option>
+                                <option value="3">3 (older kids or slow intros)</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (no kids, adults only)</option>
+                            </select>
+                        </div>
+                    </div>
             </div>
-            <div>
-                <h3><strong>Question 3</strong></h3>
-                <h4>Needs exercise?</h4>
-                <select class="chosen-select" id="q3">
-                  <option value=""></option>
-                  <option value="1">1 (Very little)</option>
-                  <option value="2">2</option>
-                  <option value="3">3 (Walks twice a day)</option>
-                  <option value="4">4</option>
-                  <option value="5">5 (Lots)</option>
-                </select>
+            <div class="row">
+                    <div class="col-sm-4" style="text-align:center">
+                        <div>
+                            <h3><strong>Question 7</strong></h3>
+                            <h4>Size, by ideal weight?</h4>
+                            <select class="chosen-select" id="q7">
+                                <option value=""></option>
+                                <option value="1">1 (Under 100lbs)</option>
+                                <option value="2">2 (100-130lbs)</option>
+                                <option value="3">3 (135-165lbs)</option>
+                                <option value="4">4 (170-200lbs)</option>
+                                <option value="5">5 (Over 200lbs)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-4" style="text-align:center">
+                        <div>
+                            <h3><strong>Question 8</strong></h3>
+                            <h4>Length/Quantity of fur?</h4>
+                            <select class="chosen-select" id="q8">
+                                <option value=""></option>
+                                <option value="1">1 (Short, thin fur)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Lots of long fur)</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-4" style="text-align:center">
+                        <div>
+                            <h3><strong>Question 9</strong></h3>
+                            <h4>Food motivated?</h4>
+                            <select class="chosen-select" id="q9">
+                                <option value=""></option>
+                                <option value="1">1 (Doesn't care)</option>
+                                <option value="2">2</option>
+                                <option value="3">3 (Average motivation)</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Lives for food/treats)</option>
+                            </select>
+                        </div>
+                    </div>
             </div>
-            <div>
-                <h3><strong>Question 4</strong></h3>
-                <h4>Special needs?</h4>
-                <select class="chosen-select" id="q4">
-                  <option value=""></option>
-                  <option value="1">1 (No special needs)</option>
-                  <option value="2">2</option>
-                  <option value="3">3 (pills or or special diet)</option>
-                  <option value="4">4</option>
-                  <option value="5">5 (Medical/mental train wreck)</option>
-                </select>
-            </div>
-            <div>
-                <h3><strong>Question 5</strong></h3>
-                <h4>Age?</h4>
-                <select class="chosen-select" id="q5">
-                  <option value=""></option>
-                  <option value="1">1 (Puppy)</option>
-                  <option value="2">2</option>
-                  <option value="3">3 (3 to 5 years old)</option>
-                  <option value="4">4</option>
-                  <option value="5">5 (Older senior)</option>
-                </select>
-            </div>
-            <div>
-                <h3><strong>Question 6</strong></h3>
-                <h4>Ok with children?</h4>
-                <select class="chosen-select" id="q6">
-                  <option value=""></option>
-                  <option value="1">1 (Loves kids)</option>
-                  <option value="2">2</option>
-                  <option value="3">3 (older kids or slow intros)</option>
-                  <option value="4">4</option>
-                  <option value="5">5 (no kids, adults only)</option>
-                </select>
-            </div>
-            <div>
-                <h3><strong>Question 7</strong></h3>
-                <h4>Size, by ideal weight?</h4>
-                <select class="chosen-select" id="q7">
-                  <option value=""></option>
-                  <option value="1">1 (Under 100lbs)</option>
-                  <option value="2">2 (100-130lbs)</option>
-                  <option value="3">3 (135-165lbs)</option>
-                  <option value="4">4 (170-200lbs)</option>
-                  <option value="5">5 (Over 200lbs)</option>
-                </select>
-            </div>
-            <div>
-                <h3><strong>Question 8</strong></h3>
-                <h4>Length/Quantity of fur?</h4>
-                <select class="chosen-select" id="q8">
-                  <option value=""></option>
-                  <option value="1">1 (Short, thin fur)</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option>
-                  <option value="5">5 (Lots of long fur)</option>
-                </select>
-            </div>
-            <div>
-                <h3><strong>Question 9</strong></h3>
-                <h4>Food motivated?</h4>
-                <select class="chosen-select" id="q9">
-                  <option value=""></option>
-                  <option value="1">1 (Doesn't care)</option>
-                  <option value="2">2</option>
-                  <option value="3">3 (Average motivation)</option>
-                  <option value="4">4</option>
-                  <option value="5">5 (Lives for food/treats)</option>
-                </select>
-            </div>
-            <div>
-                <h3><strong>Question 10</strong></h3>
-                <h4>Protective?</h4>
-                <select class="chosen-select" id="q10">
-                  <option value=""></option>
-                  <option value="1">1 (Doesn't protect anything)</option>
-                  <option value="2">2</option>
-                  <option value="3">3 (Protects some things, food or toys)</option>
-                  <option value="4">4</option>
-                  <option value="5">5 (Very possessive/protective of attention, food, toys)</option>
-                </select>
+            <div class="row">
+                    <div class="col-sm-12" style="text-align:center">
+                        <div>
+                            <h3><strong>Question 10</strong></h3>
+                            <h4>Protective?</h4>
+                            <select class="chosen-select" id="q10">
+                                <option value=""></option>
+                                <option value="1">1 (Doesn't protect anything)</option>
+                                <option value="2">2</option>
+                                <option value="3">3 (Protects some things, food or toys)</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Very possessive/protective of attention, food, toys)</option>
+                            </select>
+                        </div>
+                    </div>
             </div>
         </div>
 
     </div>
 
+    <!-- MODAL -->
+    <div class="modal" tabindex="-1" role="dialog" id="best_dog_modal">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">Best Dog!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
 
-
-<footer class="footer">
-    <div class="container">
-        <p>Control Panel</p>
-      <p><a href="#" id="clear">Clear Table</a> | <a href="/api/tables">API Table Link</a> | <a href="/api/waitlist">API Wait List</a></p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <a href="" id="profileLink" target="_blank"><button type="button" class="btn btn-primary">View Profile</button></a>
+                </div>
+            </div>
+        </div>
     </div>
-  </footer><html lang="en">
-  
 
 
-  <script type="text/javascript">
-    // On submit button, gather values
-    $(".submit").on("click", function(event) {
-      event.preventDefault();
-      var newAdopter = {
-        name: $("#name").val().trim(),
-        link: $("#link").val().trim(),
-        scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $("#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val()]
-      };
-      console.log("new adopter info", newAdopter);
 
-      // posting information
-      $.post("/api/friends", newAdopter)
-        .then(function(data) {
-          console.log("dogfinder.html", data);
-          alert("Adding adopter information...");
+    <footer class="footer">
+        <div class="container">
+            <!-- <p>Control Panel</p>
+      <p><a href="#" id="clear">Clear Table</a> | <a href="/api/tables">API Table Link</a> | <a href="/api/waitlist">API Wait List</a></p> -->
+        </div>
+    </footer>
+    <html lang="en">
+
+
+
+    <script type="text/javascript">
+        // On submit button, gather values
+        $(".submit").on("click", function (event) {
+            event.preventDefault();
+            var newAdopter = {
+                name: $("#name").val().trim(),
+                scores: [$("#q1").val(), $("#q2").val(), $("#q3").val(), $("#q4").val(), $("#q5").val(), $(
+                    "#q6").val(), $("#q7").val(), $("#q8").val(), $("#q9").val(), $("#q10").val()]
+            };
+            console.log("new adopter info", newAdopter);
+
+            // posting information
+            $.post("/api/friends", newAdopter)
+                .then(function (data) {
+                    console.log("dogfinder.html", data);
+                    $(".modal-body").empty()
+                    //   alert("Adding adopter information...");
+                    $(".modal-title").text(`Meet your new best friend: ${data.name}`)
+                    $(".modal-body").append(
+                        `<img src=${data.photo} style = "max-width:500px; height:auto"/>`)
+                    $("#profileLink").attr("href", data.link)
+                    $('#best_dog_modal').modal('toggle')
+                });
         });
-    });
-  </script>
+    </script>
 
 
-      
-  </body>
-  </html>
+
+</body>
+
+</html>
