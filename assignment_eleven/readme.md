@@ -1,0 +1,1 @@
+This was designed with some test data included in the friends.js file.  If you select all 3's on all the questions it will return Justice.  If you select all 1's it will return Minerva.  The caveat with this is it actually links to a picture and profile of an actual dog in rescue, therefore, if the dog is adopted the links might won't work
