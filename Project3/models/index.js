@@ -1,5 +1,5 @@
 module.exports = {
-    Book: require("./book"),
+    Knife: require("./knives"),
     User: require("./user")
   };
   
