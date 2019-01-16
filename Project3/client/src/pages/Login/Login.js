@@ -24,9 +24,16 @@ class Login extends Component {
     })
   }
 
-  renderRedirect = () => {
+  renderRedirectNew = () => {
     if (this.state.redirect) {
-      return <Redirect to="/knives" />
+      return <Redirect to="/user" />
+    }
+  }
+
+  renderRedirectExist = () => {
+    console.log("existing user login")
+    if (this.state.redirect) {
+      return <Redirect to="/user" />
     }
   }
 
@@ -64,31 +71,25 @@ class Login extends Component {
             <Jumbotron>
               <h1>User Login Page</h1>
             </Jumbotron>
-            {this.state.user.length===0 ? (
-              <div>
-              <h3>
-                Welcome back!
-              </h3>
-              
-                <p>List knives here from DB</p>
-                <div>
-                        {this.renderRedirect()}
-                        <FormBtn onClick={this.onSubmit}>New custome knife</FormBtn>
-                </div>
-              </div>
-              
-                
-            ) : (
              <div>
              <h3>
-                 No user found, please create a login
+                 This section of the website requires you to login
              </h3>
-                      <div>
-                        {this.renderRedirect()}
+                <div>
+                  <form>
+                    <Input name="username" value={this.state.username} onChange={this.handleInputChange} placeholder="User name (required)" />
+                    <Input name="password" value={this.state.password} onChange={this.handleInputChange} placeholder="Password (required)" />
+                  </form>
+                  <div>
+                        {this.renderRedirectExist()}
+                        <FormBtn onClick={this.onSubmit}>Returning User</FormBtn>
+                  </div>
+                </div>
+                <div>
+                        {this.renderRedirectNew()}
                         <FormBtn onClick={this.onSubmit}>New User</FormBtn>
-                      </div>
+                </div>
             </div>
-            )}
           </Col>
         </Row>
       </Container>

@@ -13,7 +13,8 @@ const knivesSchema = new Schema({
   fileorengrave: { type: String, required: false },
   finish: { type: String, required: false },
   special: { type: String, required: false },
-  date: { type: Date, default: Date.now }
+  date: { type: Date, default: Date.now },
+  username: { type: String, ref: 'users', required: true }
 });
 
 const Knife = mongoose.model("Knife", knivesSchema);

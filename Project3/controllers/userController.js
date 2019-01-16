@@ -4,8 +4,24 @@ const db = require("../models");
 module.exports = {
   findOne: function(req, res) {
     db.User
-      .find(req.query)
-      .sort({ date: -1 })
+      .findOne({username: req.query.username}, function(err, user) {
+        if (err || !user) {
+          res
+          .status(401)
+          .json({message: "There was an error finding your account"});
+          return;
+        }
+        if (!user.comparePassword(req.query.password, function(err, isMatch){
+          if (err) {
+            res
+            .status(403)
+            .json({message: "the userid password combo was incorrect."});
+          } else {
+            console.log("successful login");
+            return user;
+          }
+        }));
+      })
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },

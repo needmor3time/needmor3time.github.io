@@ -87,12 +87,17 @@ class User extends Component {
             <Jumbotron>
               <h1>User Page</h1>
             </Jumbotron>
-            {/* {this.state.name} */}
             {this.state.user.length===0 ? (
-              <h3>
+              <div>
+                <h3>
                 Welcome back!
-              </h3>
-                
+                </h3>
+              
+                  <div>
+                                    {this.renderRedirect()}
+                                    <FormBtn onClick={this.onSubmit}>Let's make a new knife!</FormBtn>
+                  </div>
+              </div>  
             ) : (
              <div>
              <h1>Please sign up</h1>
@@ -104,15 +109,10 @@ class User extends Component {
                     <Input name="apartmentNum" value={this.state.apartmentNum} onChange={this.handleInputChange} placeholder="Apartment (Optional)" />
                     <Input name="city" value={this.state.city} onChange={this.handleInputChange} placeholder="City (required)" />
                     <Input name="zipcode" value={this.state.zipcode} onChange={this.handleInputChange} placeholder="Zip Code (required)" />
-                    {/* <Router> */}
                       <div>
-                        {/* <Link to="/knives"> */}
                         {this.renderRedirect()}
                         <FormBtn onClick={this.onSubmit}>Submit</FormBtn>
-                        {/* </Link>
-                        <Route path="/knives" component={Knives} /> */}
                       </div>
-                    {/* </Router> */}
               </form>
             </div>
             )}

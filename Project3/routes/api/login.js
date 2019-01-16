@@ -1,5 +1,5 @@
 const router = require("express").Router();
-const userController = require("../../controllers/loginController");
+const userController = require("../../controllers/userController");
 
 // Matches with "/api/login"
 router.route("/")  //<--do I need to point this to something like /user?
