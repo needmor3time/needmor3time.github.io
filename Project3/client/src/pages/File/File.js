@@ -3,52 +3,54 @@ import React from 'react';
 import axios from "axios";
 
 class File extends React.Component {
+
   constructor(props) {
     super(props);
-
     this.state = {
-      imageURL: '',
+      file: null
     };
-
-    this.handleUploadImage = this.handleUploadImage.bind(this);
+    this.onFormSubmit = this.onFormSubmit.bind(this);
+    this.onChange = this.onChange.bind(this);
   }
-
-  handleUploadImage(ev) {
-    ev.preventDefault();
-    console.log("this: ",this.uploadInput.files);
-
-    const file = new Blob([this.uploadInput.files[0]], {type: 'image/jpeg'})
-    const data = new FormData();
-    data.append('file', file); //this.uploadInput.files[0]);
-    //data.append('filename', this.uploadInput.files[0].name);
-    console.log("data: ", data.get("file"));
-    axios.post("/api/file/", data, { headers: { 'Content-Type': 'multipart/form-data'}}).then((response) => {
-        //this.setState({ imageURL: `http://localhost:3000/${body.file}` });
-        console.log("axios upload", response);
+  onFormSubmit(e) {
+    e.preventDefault();
+    const formData = new FormData();
+    formData.append('myImage', this.state.file);
+    console.log("this.state.file: ",this.state.file);
+    const config = {
+      headers: {
+        'content-type': 'multipart/form-data'
+      }
+    };
+    console.log("formData: ", formData)
+    axios.post("/api/file/", formData,config ).then((response) => {
+      //this.setState({ imageURL: `http://localhost:3000/${body.file}` });
+      console.log("axios upload", response);
     }).catch(
-        function(err) {
-          console.log("err: ", err);
-        }
-      );
+      function (err) {
+        console.log("err: ", err);
+      }
+    );
+    /*axios.post("/upload",formData,config)
+        .then((response) => {
+            alert("The file is successfully uploaded");
+        }).catch((error) => {
+    });*/
+  }
+  onChange(e) {
+    this.setState({ file: e.target.files[0] });
+    console.log(e.target.files[0]);
   }
 
   render() {
     return (
-      <form onSubmit={this.handleUploadImage}>
-        <div>
-          <input ref={(ref) => { this.uploadInput = ref; }} type="file" />
-        </div>
-        {/* <div>
-          <input ref={(ref) => { this.fileName = ref; }} type="text" placeholder="Enter the desired name of file" />
-        </div> */}
-        <br />
-        <div>
-          <button>Upload</button>
-        </div>
-        <img src={this.state.imageURL} alt="img" />
+      <form onSubmit={this.onFormSubmit}>
+        <h1>File Upload</h1>
+        <input type="file" name="myImage" onChange={this.onChange} />
+        <button type="submit">Upload</button>
       </form>
-    );
+    )
   }
 }
 
-export default File;
+export default File
