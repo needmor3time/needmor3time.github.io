@@ -27,7 +27,7 @@ render() {
                 <h2>Explanation: {this.props.explanation}</h2>
                 <img src={this.props.image1} alt="knife1" height="250" width="250"/>
                 <h3>{this.props.imgdesc1}</h3>
-                <img src={this.props.image2} alt="knife2" height="350" width="350"/>
+                <img src={this.props.image2} alt="knife2" height="250" width="250"/>
                 <h3>{this.props.imgdesc2}</h3>
                 {this.props.children}
             </div>);

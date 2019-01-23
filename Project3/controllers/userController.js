@@ -3,9 +3,11 @@ const db = require("../models");
 // Defining methods for the userController
 module.exports = {
   findOne: function(req, res) {
+    console.log("find one function hit", req.query.username);
     db.User
       .findOne({username: req.query.username}, function(err, user) {
         if (err || !user) {
+          console.log("401 logic hit");
           res
           .status(401)
           .json({message: "There was an error finding your account"});
@@ -13,6 +15,7 @@ module.exports = {
         }
         if (!user.comparePassword(req.query.password, function(err, isMatch){
           if (err) {
+            console.log("403 logic hit");
             res
             .status(403)
             .json({message: "the userid password combo was incorrect."});

@@ -30,7 +30,8 @@ export default {
     // Gets all knives
   getKnives: function() {
     console.log('hi mom')
-    return axios.get(`${determineBackendHost()}/api/knives`); //
+    // return axios.get(`${determineBackendHost()}/api/knives`); //
+    return axios.get(`/api/knives`); //
   },
   // Gets the knife with the given id
   getKnife: function(id) {

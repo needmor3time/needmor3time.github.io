@@ -56,12 +56,21 @@ class Login extends Component {
   handleInputChange = event => {
     var {name, value} = event.target;
     this.setState({[name]:value})
-  }
+  };
 
-  onSubmit = (event) => {
+  onSubmitExist = (event) => {
     event.preventDefault()
         this.setRedirect();
-      }
+        axios.get("/api/login?username=" + this.state.username)
+        .then(res => console.log("res", res))
+        .catch(err => console.log(err));
+  };
+
+  onSubmitNew = (event) => {
+    event.preventDefault()
+            this.setRedirect();
+  };
+    
 
   render() {
     return (
@@ -82,12 +91,12 @@ class Login extends Component {
                   </form>
                   <div>
                         {this.renderRedirectExist()}
-                        <FormBtn onClick={this.onSubmit}>Returning User</FormBtn>
+                        <FormBtn onClick={this.onSubmitExist}>Returning User</FormBtn>
                   </div>
                 </div>
                 <div>
                         {this.renderRedirectNew()}
-                        <FormBtn onClick={this.onSubmit}>New User</FormBtn>
+                        <FormBtn onClick={this.onSubmitNew}>New User</FormBtn>
                 </div>
             </div>
           </Col>

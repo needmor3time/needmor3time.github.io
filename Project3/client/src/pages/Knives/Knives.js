@@ -151,7 +151,7 @@ class Knives extends Component {
   }
 
   onSubmit = (event) => {
-    event.preventDefault()
+    //event.preventDefault()
     const knifeData = this.state;
     console.log("knifeData: ", knifeData);
     axios.post("/api/knives/", knifeData).then(
@@ -196,13 +196,13 @@ class Knives extends Component {
             <Jumbotron>
               <h1>My knives</h1>
             </Jumbotron>
-            {this.state.knives.length ? (
+            {this.state.knives.length !==0 ? (
               <List>
                 {this.state.knives.map(knives => (
                   <ListItem key={knives._id}>
                     <a href={"/user/" + knives._id}>
                       <strong>
-                        {knives.name} by {knives.type}
+                        {knives.purpose} by {knives._id}
                       </strong>
                     </a>
                   </ListItem>

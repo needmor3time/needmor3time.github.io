@@ -45,7 +45,7 @@ const UserSchema = new Schema({
         required: true,
         minlength: 5,
         maxlength: 5
-    }
+    },
 }); 
 
 UserSchema.pre('save', function(next){

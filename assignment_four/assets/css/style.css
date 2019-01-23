@@ -1,0 +1,88 @@
+body {
+    background-image: url("../images/leaves-pattern.png");
+    background-repeat: repeat;
+  }
+  
+  #screen {
+    overflow: auto;
+  }
+  
+  #screen div {
+    float: left;
+  }
+  
+  #title {
+    width: 350px;
+    padding: 4px;
+    margin-bottom: 10px;
+    color: white;
+    background-color: blue;
+  }
+  
+  #rules-area {
+    width: 600px;
+    height: 200px;
+    padding: 4px;
+    margin-bottom: 10px;
+    color: blue;
+    background-color: white;
+  }
+  
+  #random-area {
+    width: 300px;
+    height: 60px;
+    padding: 4px;
+    font-size: 3vw;
+    color: white;
+    background-color: mediumblue;
+    text-align: center;
+  }
+  
+  #score-area {
+    width: 600px;
+    height: 60px;
+    padding: 4px;
+    color: blue;
+    background-color: white;
+  }
+  
+  #score-title {
+    width: 600px;
+    padding: 4px;
+    margin-bottom: 10px;
+    color: white;
+    background-color: blue;
+    text-align: center;
+  }
+  
+  .crystals-button {
+    display: inline;
+    padding: 20px;
+  }
+  
+  .crystal-img {
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    background-color: white;
+    border: solid;
+    border-color: lightblue;
+    margin-left: 18px;
+  }
+  
+  #score-number {
+    font-size: 3vw;
+    text-align: center;
+  }
+  
+  #win-area {
+    height: 60px;
+    width: 290px;
+    padding-bottom: 8px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    color: blue;
+    text-align: center;
+    background-color: white;
+  }
+  
