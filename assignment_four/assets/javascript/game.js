@@ -43,7 +43,9 @@ $(document).ready(function() {
       crystals = numToCrystals();
       numToGuess = randomNum();
       $("#random-area").text(numToGuess);
-      $("#win-area").empty();
+      //$("#win-area").empty();
+      createBoard();
+      renderMatchingNumber();
     }
   
     // Function that handles updating the page.
@@ -92,7 +94,7 @@ $(document).ready(function() {
     
   
     // Here we create an on.click event for the crystals.
-    $(".crystals-button").on("click", function(event) {
+    $(document).on("click", ".crystals-button", function(event) {
       console.log("button click");
       // Update our "current guess" number and re-render it.
       updateMatchingNumber($(this));
@@ -105,6 +107,7 @@ $(document).ready(function() {
         $("#win-area").append($("<p>").text("You won!"));
         //Increment wins
         wins++;
+        console.log("wins: ", wins);
         //callback to reset game
         resetGame();
       }
@@ -114,6 +117,7 @@ $(document).ready(function() {
         $("#win-area").append($("<p>").text("You lost!"));
         //Increment losses
         losses++;
+        console.log("losses: ", losses);
         //callback to reset game
         resetGame();
       }
