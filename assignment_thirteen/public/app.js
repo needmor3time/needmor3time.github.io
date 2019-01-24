@@ -24,7 +24,7 @@ $(document).on("click", ".note", function() {
   })
     // With that done, add the note information to the page
     .then(function(data) {
-      console.log(data);
+      console.log("ajax get data: ", data);
       // The title of the article
       $(".notes").append("<h2>" + data.title + "</h2>");
       // An input to enter a new title
@@ -45,30 +45,42 @@ $(document).on("click", ".note", function() {
 });
 
 // When you click the savenote button
-$(document).on("click", "#savenote", function() {
+$(document).on("click", "#button-addon2", function() {
   // Grab the id associated with the article from the submit button
   var thisId = $(this).attr("data-id");
-
+//console.log("body input: ", $("#bodyinput").val())
   // Run a POST request to change the note, using what's entered in the inputs
-  $.ajax({
-    method: "POST",
-    url: "/articles/" + thisId,
-    data: {
-      // Value taken from title input
-      title: $("#titleinput").val(),
-      // Value taken from note textarea
-      body: $("#bodyinput").val()
+  // $.ajax({
+  //   method: "POST",
+  //   url: "/articles/" + thisId,
+  //   data: {
+  //     // Value taken from title input
+  //     _articleId: thisId,
+  //     // title: $("#titleinput").val(),
+  //     // Value taken from note textarea
+  //     body: $("#bodyinput").val()
+  //   }
+  // })
+  var newNote = {
+    _articleId: thisId,
+    body:$("#bodyinput").val()
     }
-  })
+    console.log("newnote: ", newNote);
+    $.post('/articles/'+thisId, newNote)
+    
+    
     // With that done
     .then(function(data) {
       // Log the response
-      console.log(data);
+      console.log("ajax post data: ", data);
+      $.get('/articles/'+thisId)
+      .then(data => console.log("newNote Get", data)) //<--this is 
+      .catch(err => console.log(err))
       // Empty the notes section
       $("#notes").empty();
     });
 
   // Also, remove the values entered in the input and textarea for note entry
-  $("#titleinput").val("");
+  //$("#titleinput").val(""); <--I don't think I've got a note title
   $("#bodyinput").val("");
 });

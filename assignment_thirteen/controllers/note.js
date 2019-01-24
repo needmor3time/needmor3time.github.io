@@ -11,12 +11,12 @@ var db = require("../models");
 // Route for grabbing a specific Article by id, populate it with it's note
 router.get("/articles/:id", function(req, res) {
  
-  db.Article.findOne({_id : req.params.id})
+  db.Note.find({_articleId : req.params.id})
     // Specify that we want to populate the retrieved users with any associated notes
-    .populate("Note")
+    //.populate("Note")
     .then(function(dbArticle) {
       // If able to successfully find and associate all Users and Notes, send them back to the client
-      console.log(dbArticle)
+      console.log("note get findOne: ", dbArticle)
       res.json(dbArticle);
     })
     .catch(function(err) {
@@ -27,14 +27,21 @@ router.get("/articles/:id", function(req, res) {
 
 // Route for saving/updating an Article's associated Note
 router.post("/articles/:id", function(req, res) {
-  console.log("this is the note.js route")
+  console.log("this is the note.js route");
+  console.log("req.body: ", req.body);
   db.Note.create(req.body).then (function(dbNote) {
+    console.log("note post dbnote: ", dbNote);
     return db.Article.findOneAndUpdate({_id: req.params.id}, {$push:{note: dbNote._id}}, {upsert:true});
   })
     // Specify that we want to populate the retrieved users with any associated notes
     .then(function(dbArticle) {
+      console.log("dbArticle in note.js", dbArticle);
       res.json(dbArticle);
       // If able to successfully find and associate all Users and Notes, send them back to the client
+      if (data.note) {
+        // Place the body of the note in the body textarea
+        $("#bodyinput").val(data.note.body);
+      }
     })
     .catch(function(err) {
       // If an error occurs, send it back to the client

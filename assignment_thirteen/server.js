@@ -25,8 +25,7 @@ app.set("view engine", "handlebars");
 var articleRoutes = require("./controllers/article.js");
 var noteRoutes = require("./controllers/note.js");
 
-app.use(articleRoutes);
-app.use(noteRoutes);
+
 
 // Use morgan logger for logging requests
 app.use(logger("dev"));
@@ -35,7 +34,8 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
 // Make public a static folder
 app.use(express.static("public"));
-
+app.use(articleRoutes);
+app.use(noteRoutes);
 // Connect to the Mongo DB
 var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/mongoHeadlines";
 mongoose.connect(MONGODB_URI); //, { useNewUrlParser: true });

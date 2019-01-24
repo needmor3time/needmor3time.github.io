@@ -12,7 +12,7 @@ router.get("/", function(req, res) {
           var hbsObject = {
             articles: data
           };
-          console.log(hbsObject);
+          console.log("handlebars article get", hbsObject);
           res.render("home", hbsObject);
         })
         .catch(function(err){
@@ -37,7 +37,7 @@ router.get("/scrape", function(req, res) {
             result.title = $(this).children("a").text();
             console.log("result.title", result.title);
 
-            result.link = "https://www.nraila.org" + $(this).children("a").attr("href");
+            result.link = $(this).children("a").attr("href"); // took out "https://www.nraila.org" + 
             console.log("link", result.link);
 
             db.Article.create(result)

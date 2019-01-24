@@ -6,11 +6,11 @@
                 <h5 class="card-title">{{this.title}}</h5>
             </a>
             <button type="button" data-id={{this._id}} class="btn btn-primary note" style="display:block">Add note</button>
-            <div class="input-group mb-3" style="display:none">
-                <input type="text" class="form-control" placeholder="Note on article" aria-label="Article note"
+            <div class="input-group mb-3" > 
+                <input type="text" id="bodyinput" class="form-control" placeholder="Note on article" aria-label="Article note"
                     aria-describedby="button-addon2">
                 <div class="input-group-append">
-                    <button class="btn btn-outline-secondary save" type="button" id="button-addon2">Save</button>
+                    <button class="btn btn-outline-secondary save" data-id={{this._id}} type="button" id="button-addon2">Save</button>
                 </div>
             </div>
         </div>
@@ -20,3 +20,4 @@
 <div class="notes">
     
 </div>
+{{!-- removed from line 9 style="display:none" --}}
